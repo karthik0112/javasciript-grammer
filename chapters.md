@@ -1,7 +1,7 @@
 [Chapter 1] 
 
-Presentation Format
-Fundamental Principles
+*Presentation Format
+*Fundamental Principles
 
 [Chapter 2] Chrome Console
 
