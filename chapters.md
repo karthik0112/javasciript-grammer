@@ -143,6 +143,18 @@ CHAPTER 3:           ENTRY POINT OF JS
     we must make sure the script tag’s type attribute is changed to module (this is required.)
 
     
+    Strict mode;
+
+    This strict context prevents certain actions from being taken and throws more exceptions. The statement uses strict; instructs the browser to use the Strict mode, which is a reduced and safer feature set of JavaScript.
+
+    Without strict mode, certain statements might not generate an error at all – even if they are not allowed 
+
+    Strict mode makes it easier to write “secure” JavaScript.
+
+    Final Words
+
+    In a professional environment, it is common to have strict mode on, because it
+   can potentially prevent many bugs from happening and generally supports better software practice.
 
 
 
