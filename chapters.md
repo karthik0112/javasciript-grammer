@@ -196,6 +196,11 @@ CHAPTER 3:           ENTRY POINT OF JS
    let name="anbu"; (typeof//string)
 
 
+   Passing variables by reference
+
+   In Pass by reference, parameters passed as an argument does not create its own copy, it refers to the original value so changes happen in any of the parameters that affect the original value.
+
+
 
 
 
