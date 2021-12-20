@@ -112,7 +112,21 @@ CHAPTER 3:           ENTRY POINT OF JS
        We’ve just created a safe place for initializing our application. But because DOM
       is simply a tree-like structure of all HTML elements on the page, it usually becomes
       available before the rest of the media such as images and various embeds.
+ 
 
+     window.onload 
+     
+     This method can wait until all images and similar media have been fully downloaded.
+
+     Including External Scripts
+
+        <!DOCTYPE html>
+        <html>
+          <head>
+              <title>Import Module</title>
+               <script src="your-External-Script-path"></script>
+         </head>
+         </html>
 
 
 
