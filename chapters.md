@@ -182,6 +182,22 @@ CHAPTER 3:           ENTRY POINT OF JS
    let string=”hello” // to assign a string
 
 
+    
+   Dynamic Typing
+
+   JavaScript is a dynamically-typed language. It means that variables created using
+   var or let keywords can be dynamically re-assigned to a value of another type at
+   some point later in your JavaScript program.
+
+   In statically-typed languages doing that would generate an error.
+
+   example;
+   let age=45; (typeof//number)
+   let name="anbu"; (typeof//string)
+
+
+
+
 
 
 
