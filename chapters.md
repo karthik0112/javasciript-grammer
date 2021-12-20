@@ -157,6 +157,19 @@ CHAPTER 3:           ENTRY POINT OF JS
    can potentially prevent many bugs from happening and generally supports better software practice.
 
 
+   literal values;
+     
+   The literal representation of a number can be the digit 1, 25, 100 and so on. A
+   string literal can be "some text";
+   You can combine literals using operators (+,-,/,*, etc.) to produce a single result.
+   For example, to perform a 5 + 2 operation, you will simply use the literal number
+   values 5 and 2:
+
+   There are different types of literals that are supported by JavaScript. 1.Integer Literals - 1; 2.String Literals - "string"; 3.Array Literals - []; 4.Object Literals - {}; 5.Boolean Literals - true/false;
+   The typeof(value) function can be used to determine the type of the literal value.
+
+
+
 
 
 
