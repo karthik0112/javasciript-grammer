@@ -143,20 +143,6 @@ CHAPTER 3:           ENTRY POINT OF JS
     we must make sure the script tag’s type attribute is changed to module (this is required.)
 
     
-                   <!DOCTYPE html>
-  <html>
-      <head>
-          <title>Import Module</title>
-          <script type="module">
-            import { Your class } from "./file";
-            /* definition */
-          </script>
-      </head>
-      <body>
-      
-      </body>
-  </html>
-
 
 
 
