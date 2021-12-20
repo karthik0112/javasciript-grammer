@@ -7,6 +7,7 @@
                 console.log("loaded");
             }
             document.addEventListener("DOMContentLoaded",load);
+            console.log(2);
         </script>
     </head>
     <body>
