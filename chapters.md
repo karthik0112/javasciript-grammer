@@ -132,9 +132,15 @@ CHAPTER 3:           ENTRY POINT OF JS
 
     Starting from ES6 we should use import (and export) keyword to import variables, functions and classes from an external file. 
     
-    To make a variable, object or a function available for export, the export keyword must be prepended to its definition. Not everything in a module will be exported. Some of the items will remain private to it. Be sure to prepend export keyword to anything you want to export from the file.
+    To make a variable, object or a function available for export, the export keyword must be prepended to its definition. 
+    
+    Not everything in a module will be exported. Some of the items will remain private to it.
+   
+    Be sure to prepend export keyword to anything you want to export from the file.
 
-    script type = "module" Whenever to export the class and start using it in the application, we must make sure the script tag’s type attribute is changed to module (this is required.)
+    script type = "module" Whenever to export the class and start using it in the application,  
+    
+    we must make sure the script tag’s type attribute is changed to module (this is required.)
 
     
           <!DOCTYPE html>
