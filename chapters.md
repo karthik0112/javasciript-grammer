@@ -158,7 +158,7 @@ CHAPTER 3:           ENTRY POINT OF JS
 
 
    literal values;
-     
+
    The literal representation of a number can be the digit 1, 25, 100 and so on. A
    string literal can be "some text";
    You can combine literals using operators (+,-,/,*, etc.) to produce a single result.
@@ -167,6 +167,20 @@ CHAPTER 3:           ENTRY POINT OF JS
 
    There are different types of literals that are supported by JavaScript. 1.Integer Literals - 1; 2.String Literals - "string"; 3.Array Literals - []; 4.Object Literals - {}; 5.Boolean Literals - true/false;
    The typeof(value) function can be used to determine the type of the literal value.
+
+
+   Variables
+
+   There are 3 ways to declare a JavaScript variable: 1.var 2.let 3.const But These   declarations don't determine the variable's type.
+
+   let & const : const is much more strict compared to let variables. let and const are stored in different memory spaces. It's not in global space.
+
+   Examples;
+
+   let number=1  // to assign a number
+
+   let string=”hello” // to assign a string
+
 
 
 
