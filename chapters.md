@@ -70,6 +70,56 @@ syntax;
      console.log( `${obj}` );
 
 
+CHAPTER 3:           ENTRY POINT OF JS
+
+      *Every computer program has an entry point.
+
+       *You can start writing your code directly into <script> tags. But this means it will be executed instantly and simultaneously as the script is being downloaded into the browser without concern for DOM or other media.
+
+       This can create a problem because your code might be accessing DOM elements before they are fully downloaded from the server. To avoid this situation, you may want to wait until the DOM tree is fully available.
+
+
+
+       DOMContentLoaded event : 
+
+        The DOMContentLoaded event fires when the initial HTML document has been completely loaded and parsed, without waiting for stylesheets, images, and subframes to finish loading. 
+        
+        A different event, load, should be used only to detect a fully-loaded page. It is a common mistake to use load where DOMContentLoaded would be more appropriate.
+
+        addEventListener : The document.addEventListener() method attaches an event handler (event written in function) to the document (HTML Document).
+
+        Ready state;
+
+        The document.readyState property describes the loading state of the document. When the value of this property changes, a readystatechange event execute the document object.
+
+       Values : The readyState of a document value can be following one loading The document is still loading. 
+       
+       interactive The document has finished loading and the document has been parsed but sub-resources such as scripts, images, stylesheets and frames are still loading. 
+       
+       complete:the document and all sub-resources have finished loading. The state indicates that the load event is to execute. 
+
+
+
+        Dos and Don'ts;;
+
+        Do not write your code just in <script> tags, without an entry point function.
+
+        Do use the entry point to initialize the default state of your data and objects.
+
+
+        DOM vs Media
+         
+       We’ve just created a safe place for initializing our application. But because DOM
+      is simply a tree-like structure of all HTML elements on the page, it usually becomes
+      available before the rest of the media such as images and various embeds.
+
+
+
+
+
+
+
+
 
 
 
