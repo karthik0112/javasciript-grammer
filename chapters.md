@@ -214,7 +214,7 @@ CHAPTER 3:           ENTRY POINT OF JS
     It's a local memory + reference lexical environment parent
 
     Lexical Environment is a hierarchy (Sequence).
-    
+
     Lexical Example :
 
     function a() {
@@ -226,6 +226,24 @@ CHAPTER 3:           ENTRY POINT OF JS
     }
     a();    //function call   
     Note : Here b function is inside a function. It is also called as b is Lexically inside a function.
+
+
+    Statements
+
+     A statement is the smallest building block of a computer program.
+    Definitions made with var, let or const keywords return undefined because they
+    behave only as value assignments: the value is simply stored in the variable name:
+
+     let a=1; // undefined
+      a;    //1
+
+    expressions
+
+    1+1=2        //2
+
+    Expressions don’t have to be variable definitions. You can create them
+    by simply using some literal values in combination with operators.
+
 
 
 
