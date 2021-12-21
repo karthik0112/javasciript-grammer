@@ -248,6 +248,19 @@ CHAPTER 3:           ENTRY POINT OF JS
     Function f() evaluates to value 1, because it returns 1. This is why f() is often
     referred to as a function expression.
 
+    CHAPTER 5  [PRIMITIVE TYPES]
+
+    JavaScript has 7 primitive types: null, undefined, number, bigint, string,
+    boolean and symbol.
+
+    Number(), BigInt(), String() and Boolean() are primitive constructor func-
+    tions.
+
+    example;
+
+    let a=undefined;  //undefined
+    let a=100n;     //bigint  
+
 
 
 
