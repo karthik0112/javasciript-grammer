@@ -330,6 +330,54 @@ CHAPTER 3:           ENTRY POINT OF JS
      console.log(b);
 
 
+       typeof
+
+    Difference between numeric types:
+
+    typeof 10;//number
+    typeof 10n;//bigint
+
+    Equality operators can be used between the two types
+
+    10n === BigInt(10);//true
+    10n == 10;//true
+
+    Math operators only work within their own type
+
+     string
+
+    The string value is defined using any of the available quote characters: double quotes, single quotes, and back-tick quotes (Located on tilde key.) You can nest double quotes inside single quotes, and the other way around.
+
+    Running typeof on a string value returns "string":
+
+    You can also use String constructor function to build an object of string type:
+
+    
+    typeof "text"; //string
+   
+     const text = new Text("world"); //object
+     typeof text;//object
+     typeof text.valueOf();//string
+
+
+     Template Strings
+
+     Strings defined using the backtick quotes have special function.
+     
+     You can use them to create Template Strings (also known as Template Literals) to embed dynamic variable values inside the string:
+
+    let apple = 10;
+    let name =  `There are ${apple}, apples in the basket`;
+    console.log(name);
+    let firstName = "John";
+    let lastName = "Doe";
+    let text = `Welcome ${firstName}, ${lastName}!`;
+    console.log(text);
+
+    
+
+
+
 
 
 
