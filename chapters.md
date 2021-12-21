@@ -310,8 +310,24 @@ CHAPTER 3:           ENTRY POINT OF JS
     typeof number;//object
     typeof number.valueOf();//number
 
-    This example shows distinction between primitive literal value (-1, 5, 7, etc.) and the Number object. Once instantiated, the value is no longer exactly a literal but an object of that type. To get ”number” type from the object use typeof on the valueOf method as seen in the previous example typeof number.valueOf();
+    This example shows distinction between primitive literal value (-1, 5, 7, etc.) and the Number object. 
+    
+    Once instantiated, the value is no longer exactly a literal but an object of that type.  
+    
+    To get ”number” type from the object use typeof on the valueOf method as seen in the previous example typeof number.valueOf();
 
+    BIGINT;
+
+    BigInt was added in EcmaScript10 and wasn’t available until Summer 2019.
+
+    In the past the maximum value of a number created using a number literal or the Number() constructor was stored in Number.MAX SAFE INTEGER and was equal to 9007199254740991.
+
+    A bigint type allows you to specify numbers greater than Number.MAX SAFE INTEGER.
+
+     let a=BigInt(10);
+     console.log(a+1n);
+     const b=Number.MAX_SAFE_INTEGER;
+     console.log(b);
 
 
 
