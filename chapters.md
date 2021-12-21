@@ -259,7 +259,59 @@ CHAPTER 3:           ENTRY POINT OF JS
     example;
 
     let a=undefined;  //undefined
-    let a=100n;     //bigint  
+    let a=100n;     //bigint 
+
+    boolean;
+
+    The boolean primitive can be assigned either true or false value. 
+
+    typeof(boolean) : "boolean" string
+    Constructor     : new Boolean(value)
+
+    null;
+
+    Running typeof operator on null will say it’s an ”object”.
+
+    Some believe this is a bug in JavaScript because null is not an object since it
+    doesn’t have a constructor. And they are probably right...
+
+    typeof(object) : "object" string
+    Constructor     : none  
+
+    undefined
+
+    Undefined is a type of its own. It’s not an object. Just a value JavaScript will use when you named a variable but don’t assign a value to it.
+
+    Your hoisted variables will also be automatically assigned a value of undefined. 
+
+
+    Number;
+
+    The number primitive helps us work with values in the numeric domain.
+
+    Possible Values : -1 | 3 | 3.42 | 9.66e | Infinity | - Infinity | NaN
+    typeof(boolean) : "number" string
+    Constructor     : new Number(value)   
+
+    You can define negative and positive values, decimals (more commonly known as
+    floating-point numbers.) There is even a negative and positive Infinity value.
+    This makes more sense if you have some background in math.
+
+    NaN is technically a non-numeric value a statement can evaluate to. It’s available
+    directly from the Number.NaN But literally, it is exactly what it says it is: neither
+    "number" primitive nor Number() object. (It could be a "string", for example.)
+
+
+    typeof -1;
+    typeof 5;
+    typeof 7;
+
+    let number = new number(7);//undefined
+    typeof number;//object
+    typeof number.valueOf();//number
+
+    This example shows distinction between primitive literal value (-1, 5, 7, etc.) and the Number object. Once instantiated, the value is no longer exactly a literal but an object of that type. To get ”number” type from the object use typeof on the valueOf method as seen in the previous example typeof number.valueOf();
+
 
 
 
