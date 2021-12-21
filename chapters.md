@@ -200,6 +200,32 @@ CHAPTER 3:           ENTRY POINT OF JS
 
    In Pass by reference, parameters passed as an argument does not create its own copy, it refers to the original value so changes happen in any of the parameters that affect the original value.
 
+     
+     Scope Quirks
+
+    The let keyword doesn’t hoist definitions.
+
+    Lexical Environment :
+
+    Do use the entry point to initialize the default state of your data and objects.
+
+    This environment created whenever the execution context is created.
+
+    It's a local memory + reference lexical environment parent
+
+    Lexical Environment is a hierarchy (Sequence).
+    
+    Lexical Example :
+
+    function a() {
+        var a = 10;
+        b();
+        function b() { 
+            console.log(a);
+        }
+    }
+    a();    //function call   
+    Note : Here b function is inside a function. It is also called as b is Lexically inside a function.
 
 
 
