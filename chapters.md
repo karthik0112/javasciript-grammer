@@ -245,6 +245,10 @@ CHAPTER 3:           ENTRY POINT OF JS
     by simply using some literal values in combination with operators.
 
 
+    Function f() evaluates to value 1, because it returns 1. This is why f() is often
+    referred to as a function expression.
+
+
 
 
 
