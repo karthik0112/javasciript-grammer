@@ -386,7 +386,16 @@ CHAPTER 3:           ENTRY POINT OF JS
   
     Symbol('sys') === Symbol('sys') //
 
-
+     
+     TYPE COERCION;
+    
+               var a=undefined;
+               if(a){
+                console.log("true");
+                 }
+               else{
+               console.log("false");
+                }
     
 
 
