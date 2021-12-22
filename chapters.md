@@ -410,8 +410,17 @@ CHAPTER 3:           ENTRY POINT OF JS
 
   * "hello".toUpperCase().substr(1,4);//"ELLO"
 
-     
-     TYPE COERCION;
+##**CHAPTER 6**  
+
+# *TYPE COERCION MADNESS*;
+
+--Type Coercion :
+
+--It's a dynamic process of type conversion.
+
+-Type coercion is the automatic or implicit conversion of values from one data type to another (such as strings to numbers). Type conversion is similar to type coercion because they both convert values from one data type to another with one key difference — type coercion is implicit whereas type conversion can be either implicit or explicit.
+
+-The javascript engine takes the right datatype literals based on operator (+,-,* etc.) and done operations.
     
                var a=undefined;
                if(a){
@@ -420,6 +429,13 @@ CHAPTER 3:           ENTRY POINT OF JS
                else{
                console.log("false");
                 }
+
+
+            let number =  10;
+            console.log(number,typeof(number));     //10 "number"
+            number = 10 + "";
+            console.log(number,typeof(number));     //10 string
+          
     
 
 
