@@ -406,9 +406,9 @@ CHAPTER 3:           ENTRY POINT OF JS
 
 ##**Chaining Methods**
 
----Because in JavaScript functions can return this keyword, or any other value, including functions, it’s possible to chain multiple methods using the dot operator.
+* Because in JavaScript functions can return this keyword, or any other value, including functions, it’s possible to chain multiple methods using the dot operator.
 
--"hello".toUpperCase().substr(1,4);//"ELLO"
+* "hello".toUpperCase().substr(1,4);//"ELLO"
 
      
      TYPE COERCION;
