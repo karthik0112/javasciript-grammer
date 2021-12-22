@@ -381,9 +381,10 @@ CHAPTER 3:           ENTRY POINT OF JS
     
     Just like their primitive counterparts (Number, String, Boolean), they can be created using the factory function Symbol() which returns a Symbol.
 
-    let sym = new Symbol('sym'); // type error
-    let sym = Symbol('sym');//symbol created
-    Symbol('sys') === Symbol('sys') //flase
+    let symbol = Symbol();
+    console.log(sym);// created
+  
+    Symbol('sys') === Symbol('sys') //false
 
 
     
