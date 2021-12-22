@@ -374,6 +374,18 @@ CHAPTER 3:           ENTRY POINT OF JS
     let text = `Welcome ${firstName}, ${lastName}!`;
     console.log(text);
 
+
+    Symbol
+
+    Symbols are new primitive type introduced in ES6. Symbols are completely unique identifiers. 
+    
+    Just like their primitive counterparts (Number, String, Boolean), they can be created using the factory function Symbol() which returns a Symbol.
+
+    let sym = new Symbol('sym'); // type error
+    let sym = Symbol('sym');//symbol created
+    Symbol('sys') === Symbol('sys') //flase
+
+
     
 
 
