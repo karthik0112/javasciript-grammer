@@ -412,11 +412,11 @@ CHAPTER 3:           ENTRY POINT OF JS
 
 ##**CHAPTER 6**  
 
-# *TYPE COERCION MADNESS*;
+#*TYPE COERCION MADNESS*;
 
---Type Coercion :
+-Type Coercion :
 
---It's a dynamic process of type conversion.
+-It's a dynamic process of type conversion.
 
 -Type coercion is the automatic or implicit conversion of values from one data type to another (such as strings to numbers). Type conversion is similar to type coercion because they both convert values from one data type to another with one key difference — type coercion is implicit whereas type conversion can be either implicit or explicit.
 
@@ -431,10 +431,16 @@ CHAPTER 3:           ENTRY POINT OF JS
                 }
 
 
-            let number =  10;
-            console.log(number,typeof(number));     //10 "number"
-            number = 10 + "";
-            console.log(number,typeof(number));     //10 string
+* Number And String Arithmetic
+
+*   Naturally the arithmetic + operator requires two values.
+*   5+5; //10
+*   If both values are integers, arithmetic operation is performed. If one of them is a    string then coercion happens and string addition is invoked.
+
+     let number =  10;
+     console.log(number,typeof(number));     //10 "number"
+     number = 10 + "";
+     console.log(number,typeof(number));     //10 string
           
     
 
