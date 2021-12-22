@@ -386,7 +386,7 @@ CHAPTER 3:           ENTRY POINT OF JS
    
     Symbol('sys') === Symbol('sys') //
 
-    ## **Executing Methods On Primitive Types Parenthesis And Object Property Access**
+##**Executing Methods On Primitive Types Parenthesis And Object Property Access**
 
    -The parenthesis operator gives you control over which statement should evaluate -first. That’s its primary purpose.
 
@@ -404,10 +404,11 @@ CHAPTER 3:           ENTRY POINT OF JS
 
      -A literal is just a literal value. By accessing its properties, it turns into a -reference to the object instance so you can execute object methods on that value.
 
-Chaining Methods
+##**Chaining Methods**
 
-Because in JavaScript functions can return this keyword, or any other value, including functions, it’s possible to chain multiple methods using the dot operator.
-"hello".toUpperCase().substr(1,4);//"ELLO"
+---Because in JavaScript functions can return this keyword, or any other value, including functions, it’s possible to chain multiple methods using the dot operator.
+
+-"hello".toUpperCase().substr(1,4);//"ELLO"
 
      
      TYPE COERCION;
