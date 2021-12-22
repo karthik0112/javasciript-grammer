@@ -431,11 +431,11 @@ CHAPTER 3:           ENTRY POINT OF JS
                 }
 
 
-*  Number And String Arithmetic
+# * Number And String Arithmetic*#
 
--  Naturally the arithmetic + operator requires two values.
--   5+5; //10
--   If both values are integers, arithmetic operation is performed. If one of them is a    string then coercion happens and string addition is invoked.
+   -  Naturally the arithmetic + operator requires two values.
+   -  5+5; //10
+   -  If both values are integers, arithmetic operation is performed. If one of them is a    string then coercion happens and string addition is invoked.
 
      let number =  10;
      console.log(number,typeof(number));     //10 "number"
