@@ -10,4 +10,4 @@ function start() {
         end();
     }
 }
-start();  
+start();
