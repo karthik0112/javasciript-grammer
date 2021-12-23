@@ -1,4 +1,4 @@
-var a = 10
+const a = 10;
 function f(){
     console.log(a)
 }
