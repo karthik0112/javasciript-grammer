@@ -452,7 +452,36 @@ CHAPTER 3:           ENTRY POINT OF JS
 
  - 5+"";
 -   But this is still not enough to produce the final result. Adding a numeric value to a string value will coerce the numeric value to a string and then add them together:
-Finally we arrive at "5" in string format. When adding numbers and strings, numeric values always take precedence. This seems to be a trend in JavaScript. In the next example we we will compare numbers to strings using the equality operator. JavaScript chooses to convert strings to numbers first, instead of numbers to strings.
+Finally we arrive at "5" in string format. When adding numbers and strings, numeric values always take precedence. 
+
+-   This seems to be a trend in JavaScript. In the next example we we will compare numbers to strings using the equality operator. JavaScript chooses to convert strings to numbers first, instead of numbers to strings.
+
+* * Operator Precedence 
+
+-   Some operators take precedence over others. What this means is that multiplication will be evaluated before addition.
+
+-   Let’s take this statement for example:
+-   1+1+1+2*"";//3
+
+-   Several things will happen here. The string "" will coerce to 0 and 2 * 0 will evaluate to 0.
+1+1+1+2*"";
+1+1+1+2*0;
+1+1+1+0;
+3+0;//3
+* * String To Number Comparison
+
+-   When it comes to equality operator == numeric strings are evaluated to numbers in the same way the Number(string) function evaluates to numbers (or NaN).
+-   According to EcmaScript specification, coercion between a string and a numeric value on both sides of the == operator can be visualized as follows.
+
+* * Comparing Numeric String To Number
+
+1 == "1"; //true
+"1" == 1; //true
+
+* * Comparing Non-Numeric String To Number
+
+-   If the string does not contain a numeric value, it will evaluate to NaN and therefore further evaluating to false:
+1 == "a"; //false
           
     
 
