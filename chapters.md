@@ -410,9 +410,9 @@ CHAPTER 3:           ENTRY POINT OF JS
 
   * "hello".toUpperCase().substr(1,4);//"ELLO"
 
-## **CHAPTER 6 
+# CHAPTER 6 
 
-# * TYPE COERCION MADNESS
+ * TYPE COERCION MADNESS
 
 - Type Coercion :
 
