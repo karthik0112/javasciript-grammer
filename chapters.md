@@ -441,6 +441,18 @@ CHAPTER 3:           ENTRY POINT OF JS
      console.log(number,typeof(number));     //10 "number"
      number = 10 + "";
      console.log(number,typeof(number));     //10 string
+
+* Adding Multiple Values *
+
+-   Often you will encounter statements tied together by multiple operators. What should the following statement evaluate to?
+
+-   1+1+1+1+2+""; //"6"
+
+-   First, all of the purely numeric values will be combined, ending up with the sum of 5   on the left hand side and "" on the right hand side
+
+ - 5+"";
+-   But this is still not enough to produce the final result. Adding a numeric value to a string value will coerce the numeric value to a string and then add them together:
+Finally we arrive at "5" in string format. When adding numbers and strings, numeric values always take precedence. This seems to be a trend in JavaScript. In the next example we we will compare numbers to strings using the equality operator. JavaScript chooses to convert strings to numbers first, instead of numbers to strings.
           
     
 
