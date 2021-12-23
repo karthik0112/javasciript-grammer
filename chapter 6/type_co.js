@@ -1,4 +1,4 @@
-var a=undefined;
+var a=null;
 if(a){
  console.log("true");
   }
