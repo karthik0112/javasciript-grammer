@@ -410,9 +410,9 @@ CHAPTER 3:           ENTRY POINT OF JS
 
   * "hello".toUpperCase().substr(1,4);//"ELLO"
 
-## **CHAPTER 6** ## 
+## **CHAPTER 6 
 
-* TYPE COERCION MADNESS*;
+# * TYPE COERCION MADNESS
 
 - Type Coercion :
 
@@ -431,7 +431,7 @@ CHAPTER 3:           ENTRY POINT OF JS
                 }
 
 
- * *   Number And String Arithmetic 
+ # *   Number And String Arithmetic 
  
    -  Naturally the arithmetic + operator requires two values.
    -  5+5; //10
@@ -442,7 +442,7 @@ CHAPTER 3:           ENTRY POINT OF JS
      number = 10 + "";
      console.log(number,typeof(number));     //10 string
 
-* Adding Multiple Values *
+# * Adding Multiple Values 
 
 -   Often you will encounter statements tied together by multiple operators. What should the following statement evaluate to?
 
