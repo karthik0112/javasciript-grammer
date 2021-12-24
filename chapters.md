@@ -442,7 +442,7 @@ CHAPTER 3:           ENTRY POINT OF JS
      number = 10 + "";
      console.log(number,typeof(number));     //10 string
 
-# * Adding Multiple Values 
+# Adding Multiple Values 
 
 -   Often you will encounter statements tied together by multiple operators. What should the following statement evaluate to?
 
