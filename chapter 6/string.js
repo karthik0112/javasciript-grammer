@@ -5,3 +5,4 @@ typeof "price"+250;//string
 let text = new Text("hello.");//undefined
 typeof text;//object
 typeof text.valueOf();//string
+console.log(text);
