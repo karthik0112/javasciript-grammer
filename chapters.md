@@ -13,9 +13,9 @@ What is javascript?
         
         * The constructor method is a special method of a class for creating and initializing an object instance of that class.
 
-[CHAPTER 2]
+# [CHAPTER 2] #
 
-        Chrome console
+# * *Chrome console * *
  
         * Many programmers only know Chrome’s console.log but the console API contains few other methods that have practical use, especially when time is of essence.
   
