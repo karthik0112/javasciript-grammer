@@ -6,5 +6,3 @@ var plus = (function(){
     }
 })();
 plus();
-plus();
-plus();
