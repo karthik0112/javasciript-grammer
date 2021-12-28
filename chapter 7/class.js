@@ -1,4 +1,4 @@
- /*class cat {
+/*class cat {
      let property = 20; //"Unexpexted token" Error
      this.property = 2;
     }*/
