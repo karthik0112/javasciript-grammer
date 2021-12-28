@@ -1,8 +1,9 @@
 
-console.log(data);
-{
-    var data = 1;
-}
+
+ var data = 1;
+ console.log(b); 
+
+
 
 const b = 186000;
 b = 1;
