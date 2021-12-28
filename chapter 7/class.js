@@ -7,7 +7,7 @@
             let property = 1; //Ok: local variable 
             this.something = 2;//Ok: object property
         }
-        mehtod(){
+        method(){
             console.log(this.property); //undefined
             console.log(this.something);//1
         }
