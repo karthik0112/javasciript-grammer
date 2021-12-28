@@ -1,7 +1,7 @@
 
 
  var data = 1;
- console.log(b); 
+ console.log(data); 
 
 
 
