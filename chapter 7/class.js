@@ -12,4 +12,5 @@
             console.log(this.something);//1
         }
     }
-    
+    let catt=new cat();
+    catt.method();
