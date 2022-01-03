@@ -1,4 +1,4 @@
-## 1.prime number##
+## ** 1.prime number
 INPUT n
 i = 2
 answer = prime
