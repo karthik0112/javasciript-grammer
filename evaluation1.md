@@ -135,7 +135,7 @@ word = 'i like this program very much'
 console.log(reverse(word))
 ```
 
-## 5. How will you verify a word as a palindrome? Algorithm
+## 5. How will you verify a word as a palindrome? 
 
 * algorithm
 
@@ -176,7 +176,9 @@ console.log(checkPalindrome("redivider"));
 console.log(checkPalindrome("karthi"));
 ```
 
-## 6.Write your own program to explain the difference between forEach and map? .map
+## 6.Write your own program to explain the difference between forEach and map?
+* Map() : If you use map then map can return new array by iterating main array.
+* Foreach() : If you use Foreach then it cannot return anything for each can iterating main array.
 
 * algorithm
   
@@ -324,6 +326,75 @@ for (i = 1; i <=a; i++)
 console.log("total odd numbers is", odd_sum);
 console.log("total even numbers", even_sum);
 ```
+## 11. Write a program to merge two arrays? ([1,2,9,3,5,1,4,5], [11,54,70,40])
+
+* algorithm
+
+- Step 1. start the program.
+- Step 2. Declare two arrays arr1,arr2.
+- Step 3. creat the new array 
+- Step 4. to concatinate the array values to the new array.
+- Step 5. Print the new array
+- Step 6. Stop.
+
+* psuedocode
+```
+BEGIN
+INIT arr1;
+INIT arr2;
+ THEN 
+ADD arr1,arr2 ;
+PRINT new array
+``` 
+* code
+```javascript
+const arr1 = [1,2,9,3,5,1,4,5];
+const arr2 = [11,54,70,40];
+
+const newarray = arr1.concat(arr2); 
+console.log(newarray);
+```
+
+## 12. Remove duplicate from an array of an object by id and name? a. [{id: 1, name: ‘Stephen covey’ }, {id: 2, name: ‘Robin Sharma’ }, {id: 3, name:‘Tolstoy’}, {id: 3, name: ‘Tolstoy’}, {id: 5, name: ‘James clear’}]
+
+* algorithm
+* psuedocode
+```
+Step 1. Use strict mode as public.
+Step 2. Declare a constructor and a array.
+Step 3. Use filter function to iterate the values in array.
+Step 4. Declare two variable to check the name and id in consructor with has() method indicates whether the Set object contains the specified value.
+Step 5. Check both values using ! && return the value.
+Step 6. Then call the function with array and print it.
+Step 7. Stop.
+
+* code
+```javascript
+let a = new Set();
+let arr = [
+    {id: 1, name: 'Stephen covey'},
+    {id: 2, name: 'Robin Sharma' }, 
+    {id: 3, name: 'Tolstoy'}, 
+    {id: 3, name: 'Tolstoy'}, 
+    {id: 5, name: 'James clear'}
+];
+
+const filteredArr = arr.filter(values => {
+  const duplicate1= a.has(values.id);
+  a.add(values.id);
+  const duplicate2= a.has(values.id);
+  a.add(values.name);
+  return !duplicate1,!duplicate2 ;
+});
+console.log(a);
+```
+
+
+
+
+
+
+
 
 
 
