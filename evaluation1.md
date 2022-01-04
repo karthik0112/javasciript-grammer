@@ -85,9 +85,9 @@ console.log (a === b);
    RETURN newString
   SET result
   PRINT result
-END    
-
-* code  
+END 
+``` 
+* code 
 ```javascript
 function reverseString(str) {
     let newString = "";
@@ -100,6 +100,84 @@ const string = ('hello world');
 
 const result = reverseString(string);
 console.log(result);
+```
+## 4. How would you reverse words in a sentence?
+
+* algorithm
+  
+  - step 1. Start the program.
+  - step 2. create a function with parameter of reverse.
+  - Step 2. Use the reverse() method to reverse the new created array
+  - Step 3. Use the join(" ") method to join all elements of the array into a string
+  - Step 4. Return the reversed string
+  - Step 5. Call the string function with string parameters
+  - Step 6. Stop.
+
+* psuedocode
+```
+BEGIN
+  FUNCTION reverse(word)
+    SET word.split(" ")
+    SET reverse.join(" ")  
+    RETURN word
+  END FUNCTION
+  SET word
+  PRINT result
+```    
+* code
+```javascript
+function reverse (word) {
+    word = word.split(" ").reverse().join(" ")
+    return word
+
+}
+word = 'i like this program very much'
+console.log(reverse(word))
+```
+
+## 5. How will you verify a word as a palindrome? Algorithm
+
+* algorithm
+
+- Step 1. Use strict mode as public.
+- Step 2. Create a function with string parameter
+- Step 3. Initialise the varibale to know the length of string.
+- Step 4. Run the for loop for iteration of half word.
+- Step 5. Use if condition to check first value with last value else print not palindrome.
+- Step 6. Then call the function with string parameter.
+- Step 7. Stop.
+
+* psuedocode
+```
+BEGIN
+FUNCTION checkPalindrome(str)
+     SET len = str.length;
+     FOR (let i = 0; i < len / 2; i++)
+       IF str[i] !== str[len - 1 - i]) 
+         RETURN (It is not a palindrome.)
+        ENDIF
+       ENDFOR
+     RETURN (It is a palindrome)
+PRINT (checkPalindrome("redivider")
+PRINT (checkPalindrome("redivide")
+```
+* code
+```javascript
+function checkPalindrome(str) {
+    const len = str.length;
+    for (let i = 0; i < len / 2; i++) {
+      if (str[i] !== str[len - 1 - i]) {
+        return("NOT a palindrome");
+      }
+    }
+    return("The string is a palindrome");
+}
+console.log(checkPalindrome("redivider"));
+console.log(checkPalindrome("karthi"));
+```
+
+
+
  
 
 
