@@ -1,4 +1,4 @@
-
+let n=5;
 let num = "";
 let count = 1;
 for (let i = 1; i < 5; i++) {
@@ -6,9 +6,9 @@ for (let i = 1; i < 5; i++) {
     num += " ";
   }
   for (let k = 0; k < 2*i-i; k++) {
-    num += count;
+    num +=count;
     count++;
-    num += " "; 
+    num +=" "; 
   }  
   num += "\n";
 }

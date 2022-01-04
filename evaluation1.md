@@ -1,12 +1,13 @@
 ## prime number
-- INPUT 1
-- READ i
-- function isPrimeNumber(n) {
-  - for (var i = 2; i < n; i++) { 
-    - if(n % i === 0) return false; 
- -  }
-  - return n > 1; 
-- console.log(isPrimeNumber(1)); 
-- console.log(isPrimeNumber(2));  
-- console.log(isPrimeNumber(9));  
-- console.log(isPrimeNumber(11)); 
+* algorithm
+* psedocode
+* code
+    ...
+    - Create a boolean array
+    - // "prime[0..n]" and
+    - // initialize all entries
+    - // it as true. A value in
+    - // prime[i] will finally be
+    - // false if i is Not a
+    - // prime, else true.
+- 
