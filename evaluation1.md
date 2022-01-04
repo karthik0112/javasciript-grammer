@@ -9,13 +9,15 @@
 
 * psuedocode
 ```
-  BEGIN
-    INPUT 6.
-  FUNCTION isPrime
-    IF num%2===0
-    RETURN false
-    THEN true
-  END
+BEGIN
+  FUNCTION isPrime(num)
+    IF (num%2===0)
+     RETURN false
+     THEN 
+     RETURN true
+    ENDIF
+  ENDFUNCTION  
+END
 ```  
  
  * code
@@ -40,10 +42,11 @@ function isPrime(num) {
   - step 4. after comparision it will print either true or false.
   - step 5. stop
 
-* pseudocode
+* psuedocode
 ```
 BEGIN
-  INPUT a,b,c.
+  INIT a
+  INIT b,c
   COMPARE a == b
     PRINT TRUE
   CHECK a === c 
@@ -60,3 +63,44 @@ console.log (a == b);
 console.log (a === c);
 console.log (a === b);
 ```
+## 3.how would you reverse a string in JavaScript?
+
+* algorithm
+  - step 1. Start the program.
+  - step 2. create a function with reverse string.
+  - step 3. initialize the new string to variables.
+  - step 4. Then add the string reversly with reversed variable.
+  - step 5. Call the function with string.
+  - step 6. print the result
+  - step 7. stop
+ 
+* pseudocode
+```
+ BEGIN
+  FUNCTION reverseString(str)  
+   INIT newString
+   FOR (i = str.length -1; i >= 0; i--)
+    SET newString = str[i]
+   ENDFOR
+   RETURN newString
+  SET result
+  PRINT result
+END    
+
+* code  
+```javascript
+function reverseString(str) {
+    let newString = "";
+    for (let i = str.length -1; i >= 0; i--) {
+        newString += str[i];
+    }
+    return newString;
+}
+const string = ('hello world');
+
+const result = reverseString(string);
+console.log(result);
+ 
+
+
+
