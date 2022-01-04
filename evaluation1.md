@@ -176,6 +176,12 @@ console.log(checkPalindrome("redivider"));
 console.log(checkPalindrome("karthi"));
 ```
 
+## Write your own program to explain the difference between forEach and map? .map
+
+* algorithm
+* psuedocode
+* code
+
 
 
  
