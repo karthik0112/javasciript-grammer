@@ -176,11 +176,166 @@ console.log(checkPalindrome("redivider"));
 console.log(checkPalindrome("karthi"));
 ```
 
-## Write your own program to explain the difference between forEach and map? .map
+## 6.Write your own program to explain the difference between forEach and map? .map
 
 * algorithm
+  
+- Step 1. start the program
+- Step 2. Create a array with number values.
+- Step 3. Use map method with the array and write the event.
+- Step 4. Use the forEach to iterate the values.
+- Step 5. Print the values
+- Step 6. stop
+
 * psuedocode
+```
+BEGIN
+INIT numbers
+PRINT map(element => element * element)
+PRINT forEach(element => element * element) 
+```
 * code
+```javascript
+const numbers = [5, 4, 3, 2, 1]
+console.log(numbers.map(element => element * element)) 
+
+console.log(numbers.forEach(element => element * element))
+```
+
+## 7.Generate a random number between 1 to 5?
+
+* algorithm
+
+- Step 1. start the program
+- Step 2. Use Math.floor to returns the largest integer less than or equal to a given number
+- Step 3. Math.random to get the random value till given number.
+- Step 5. Add the number 1 to avoid the 0 values.
+- Step 6. Then print the number.
+- Step 7. Stop.
+
+* psuedocode
+```
+BEGIN
+INIT rndInt
+PRINT (Math.floor((Math.random() * 5) + 1));
+```
+* code
+```javascript
+const rndInt = Math.floor(Math.random() * 5) + 1;
+console.log(rndInt);
+```
+
+## 8. Remove duplicate from the following array?([1,2,9,4,5,8,3,5,1,4,5])
+
+* algorithm
+
+- Step 1. start the program
+- Step 2. Create a array with number values.
+- Step 3. use SET method 
+- Step 4. array initialized with SET method
+- Step 5. Print the values
+- Step 6. stop
+
+* psuedocode
+```
+BEGIN
+INIT numbers
+INIT uniquenumbers
+SET numbers
+PRINT uniquenumbers
+```
+* code
+```javascript
+let numbers = [1,2,9,4,5,8,3,5,1,4,5];
+let uniquenumbers = [...new Set(numbers)];
+
+console.log(uniquenumbers);
+```
+
+## 9. Write a program to calculate the sum of the first 10 natural numbers.
+* algorithm
+
+- Step 1. start the program.
+- Step 2. Declare two varibale sum = 0 , i = 1.
+- Step 3. Use for loop to iterate the values.
+- Step 4. Add the iterated values inside the for.
+- Step 5. Print the value and call the function.
+- Step 6. Stop.
+
+* psuedocode
+```
+BEGIN
+INIT variable number
+i and sum as integer; 
+READ number number ; 
+for i upto n increment i by 1 and i=1 
+{ sum=sum+i; } 
+PRINT sum; 
+```
+* code
+```javascript
+let number=10;
+let sum = 0;
+for (let i = 1; i <= number; i++) {
+    sum += i;
+}
+
+console.log('The sum of natural numbers:', sum);
+```
+## 10. Write a program to print the sum of the even and odd numbers for a given number?(100)
+
+* algorithm
+
+- Step 1. start the program
+- Step 2. Declare two variables odd and even with 0 value.
+- Step 3. Iterate for loop till 100 times.
+- Step 4. if(i % 2 == 0) then print even numbers
+- Step 5. else print odd numbers.
+- Step 6. Call the function.
+- Step 7. Stop.
+
+
+* psuedocode
+```
+BEGIN
+  INIT a=100;
+  INIT even=0,odd=0;
+  FOR(let i=0;i<=value;i++) DO
+    IF (i % 2 == 0) THEN
+      even = even + i;
+    ELSE 
+      odd = odd + i;
+    ENDIF
+  PRINT ("The sum of even numbers:",even);
+  PRINT ("The sum of odd numbers:",odd); 
+END
+```  
+* code
+```javascript
+var a =100;
+odd_sum=0;even_sum=0;
+for (i = 1; i <=a; i++)
+  {
+    if (i % 2 == 0)
+      even_sum = even_sum + i;
+    else
+      odd_sum = odd_sum + i;
+  }
+console.log("total odd numbers is", odd_sum);
+console.log("total even numbers", even_sum);
+```
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
