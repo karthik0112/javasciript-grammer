@@ -448,8 +448,8 @@ function cmp(object1, object2) {
   }
   console.log(cmp(a, c)); // => true
   console.log(cmp(c, d)); // => false
+```  
   
-
 
 ## 14.Take a multidimensional array and flat the array?
 
@@ -464,8 +464,7 @@ function cmp(object1, object2) {
 * psuedocode
 ```
 BEGIN
-INIT multi = [1,4,2,3,[10,20,20], [100,500,700,600],
-[2000,1000]];
+INIT multi = [1,4,2,3,[10,20,20], [100,500,700,600],[2000,1000]];
 PRINT (multi.flat(Infinity));
 END
 ```
@@ -482,7 +481,7 @@ console.log(multi.flat(Infinity));
 - Step 1. Start the program.
 - Step 2. Initialize the array and its objects.
 - Step 3. TO use the reduce function to iterate previous value with current value.
-- Step 4. Check the both value and add count into previous value or make it one
+- Step 4. Check the both values and add count into previous value or make it one
 - Step 5. Print the value.
 - Step 6. Stop.
 
@@ -506,6 +505,245 @@ let groupbyid = people.reduce((r, a) => {
   }, {});
   console.log(groupbyid);
 ```
+
+## 16. Write a program in Javascript to display the pattern like right angle triangle using an asterisk
+
+* algorithm
+
+- Step 1. Start the program.
+- Step 2. Declare one empty string and size.
+- Step 3. for loop will execute and increase the i values.
+- Step 4. Then print the string.
+- Step 5. Stop.
+
+* psuedocode
+```
+BEGIN
+INIT string = "";
+INIT size = 5;
+FOR(let i = 1; i <= size; i++) 
+    SET string += "*";
+ENDFOR
+PRINT (string);
+```
+* code
+```javascript
+var string = "";
+var size =5;
+for(var i=1; i<=size; i++)
+
+{
+  string= string+"*";
+  console.log(string);
+}
+```
+## 17. Write a program in Javascript to make such a pattern like right angle triangle with number increased by 1
+
+* algorithm
+* psuedocode
+```
+BEGIN 
+INIT string = "";
+INIT size = 4; 
+INIT count = 1;
+FOR(let i = 1; i <= size; i++)
+   FOR(let j = 1; j <= i; j++)
+     SET string += " " + count;
+     SETcount++;
+   ENDFOR
+   SET string += "\n";
+ENDFOR
+PRINT (string);
+END
+```
+* code
+```javascript
+let string = "";
+let size = 4; 
+let count = 1;
+for (let i = 1; i <= size; i++) {
+  for (let j = 1; j <= i; j++) {
+    string += " "+count;
+    count++;
+  }
+  string += "\n";
+}
+console.log(string);
+```
+## 18. Write a program in Javascript to make such a pattern like a pyramid with numbers increased by 1
+
+* algorithm
+
+- Step 1. start the program.
+- Step 2. Initialize count variable and one empty string.
+- Step 3. Create for loop to iterate values of specified condition.
+- Step 4. After that create another for loop with condition of (2*i)-i
+- Step 5. Add the count value to string and increment count.
+- Step 6. print the value.
+- Step 7. Stop.
+
+* psuedocode
+```
+BEGIN
+INIT n;
+INIT number = "";
+INIT count=1;
+FOR (let i = 1;i<n;i++)
+  FOR (let j = 1;j<= n - i;j++) 
+    SET number += " ";
+    ENDFOR
+  FOR (let k = 0; k < 2*i-i ; k++) 
+   SET number += count;
+   SET count++;
+   SET number += "
+   ENDFOR
+  SET += "\n";
+  ENDFOR
+PRINT (number);
+```
+* code
+```javascript 
+let n=5;
+let num = "";
+let count = 1;
+for (let i = 1; i < n; i++) {
+  for (let j = 1; j <= n - i; j++) {
+    num += " ";
+  }
+  for (let k = 0; k < 2*i-i; k++) {
+    num +=count;
+    count++;
+    num +=" "; 
+  }  
+  num += "\n";
+}
+console.log(num);
+```
+
+## 19. Write a program in Javascript to display the pattern like a diamond?
+
+* algorithm
+
+- Step 1. Start the program.
+- Step 2. Initialize n variable and empty string.
+- Step 3. create for loop and will execute 2*i-1 times for print stars.
+- Step 4. To add "/n" for printing new line .
+- Step 5. After that it will execute reverse pyramid.
+- Step 6. print the values.
+- Step 7. Stop
+
+* psuedocode
+```
+BEGIN
+INIT n = 5;
+INIT string = "";
+FOR (let i = 1; i <= n; i++) 
+  FOR (let j = 1; j < n - i + 1; j++)
+   SET string += " ";
+  ENDFOR
+  FOR (let k = 1; k <= 2 * i - 1; k++)
+   SET string += "*"; 
+   SET string += "\n";
+  ENDFOR
+ENDFOR
+ FOR (let i = 1; i <= n - 1; i++)
+    FOR (let j = 1; j < i + 1; j++)
+     SET string += " ";
+    ENDFOR
+    FOR (let k = 1; k <= 2 * (n - i) - 1; k++)
+      SET string += "*"; 
+      SET string += "\n";
+    ENDFOR  
+ENDFOR
+PRINT (string);
+END
+```
+* code
+```javascript
+let n = 5;
+let string= "";
+// Upside pyramid
+for (let i = 1; i <= n; i++) {
+  // printing spaces
+  for (let j = 1; j < n -i + 1; j++) {
+    string += " ";
+  }
+  // printing star
+  for (let k = 1; k <= 2 * i - 1; k++) {
+    string += "*";
+  }
+  string += "\n";
+}
+
+// downside pyramid
+for (let i = 1; i <= n - 1; i++) {
+  // printing spaces
+  for (let j = 1; j < i+1; j++) {
+    string += " ";
+  }
+  // printing star
+  for (let k = 1;k <= 2 * (n - i) - 1;k++) {
+    string += "*";
+  }
+  string += "\n";
+}
+console.log(string);
+```
+
+## Explain the following terms console.log().console.count()?
+
+* console.log();
+
+- The log() method is useful for testing purposes.
+```javascript
+console.log("hell0");
+```
+
+
+
+
+
+//console log
+
+//console.dir
+let object = { property1 : 1, property1 : 2, method : function(){} };
+console.dir(object);
+//cosole.count
+for (let i = 0; i < 5; i++) {
+    console.count("myLabel");
+}
+//console.table
+var arr1=["Audi", "Volvo", "Ford"]
+console.table(arr1);
+//console.time()andtimeEnd()
+console.time();
+let arr = Array(1000);
+for(let i=0; i<arr.length; i++) {
+arr[i] = new Object();
+}
+console.timeEnd();  
+//console.trace()
+function foo() {
+    function bar() {
+      console.trace();
+    }
+    bar();
+  }
+    foo();
+//console group and groupEnd
+console.log("Hello world!");
+console.group();
+console.log("Hello again, this time inside a group!");
+console.groupEnd();
+console.log("and we are back.");    
+//console.assert
+function assert(condition, message) {
+    if (!condition) {
+        throw message || "Assertion failed";
+    }
+}
+assert();
+
 
 
 
