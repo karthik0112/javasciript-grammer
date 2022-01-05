@@ -690,7 +690,7 @@ for (let i = 1; i <= n - 1; i++) {
 console.log(string);
 ```
 
-# 20.Explain the following terms console.log().console.count()?
+### 20.Explain the following terms console.log().console.count()?
 
 **console.log();** 
 
