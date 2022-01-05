@@ -1,4 +1,4 @@
-## 1.prime number
+## 1. Check prime number
 * algorithm
   - step 1. Start the program.
   - step 2. Write a function with parameter and assign to a variable.
@@ -326,7 +326,7 @@ for (i = 1; i <=a; i++)
 console.log("total odd numbers is", odd_sum);
 console.log("total even numbers", even_sum);
 ```
-## 11. Write a program to merge two arrays? ([1,2,9,3,5,1,4,5], [11,54,70,40])
+## 11. Write a program to merge two arrays? 
 
 * algorithm
 
@@ -355,18 +355,32 @@ const newarray = arr1.concat(arr2);
 console.log(newarray);
 ```
 
-## 12. Remove duplicate from an array of an object by id and name? a. [{id: 1, name: ‘Stephen covey’ }, {id: 2, name: ‘Robin Sharma’ }, {id: 3, name:‘Tolstoy’}, {id: 3, name: ‘Tolstoy’}, {id: 5, name: ‘James clear’}]
+## 12. Remove duplicate from an array of an object by id and name?
 
 * algorithm
+
+- Step 1. Start the program.
+- Step 2. initialize a constructor and array.
+- Step 3. And use filtered function to iterate the values in array.
+- Step 4. to check the name and id in consructor with has() method by using declared variables 
+- Step 5. Check both values using !duplicate1,duplicate2 and return the value.
+- Step 6. Then call the function with array.
+- Step 7. print the output.
+- Step 8. stop.
+
 * psuedocode
 ```
-Step 1. Use strict mode as public.
-Step 2. Declare a constructor and a array.
-Step 3. Use filter function to iterate the values in array.
-Step 4. Declare two variable to check the name and id in consructor with has() method indicates whether the Set object contains the specified value.
-Step 5. Check both values using ! && return the value.
-Step 6. Then call the function with array and print it.
-Step 7. Stop.
+BEGIN
+INIT set();
+DECLARE arr and assigning the objects;
+FUNCTION using filtered=arr.filter();
+  SET add values.id
+  SET add values.name
+  RETURN !duplicate1,!duplicate2
+ENDFUNCTION
+PRINT a;
+END
+```  
 
 * code
 ```javascript
@@ -388,6 +402,115 @@ const filteredArr = arr.filter(values => {
 });
 console.log(a);
 ```
+
+## 13.Compare two objects, If all properties are equal return true or return false?
+
+* algorithm
+* psuedocode
+```
+BEGIN
+INIT a,b,c and d
+FUNCTION cmp(object1,object2)
+    INIT keys1 = Object.keys(object1);
+    INIT keys2 = Object.keys(object2);
+    IF(keys1.length !== keys2.length)THEN
+      RETURN false;
+    ENDIF
+    FOR(let key of keys1) 
+       IF(object1[key] !== object2[key]) THEN
+         RETURN false;
+       ELSE
+         RETURN true;
+       ENDIF
+    ENDFOR
+ENDFUNCTION
+END
+```
+
+* code
+```javascript
+var a={id: 1, name: "edison"};
+var b={id: 1, name: "edison"};
+var c={id: 1, name: "edison"};
+var d={id: 1, name: "edison"};
+function cmp(object1, object2) {
+    const keys1 = Object.keys(object1);
+    const keys2 = Object.keys(object2);
+    if (keys1.length !== keys2.length) {
+      return false;
+    }
+    for (let key of keys1) {
+      if (object1[key] !== object2[key]) {
+        return false;
+      }
+    }
+    return true;
+  }
+  console.log(cmp(a, c)); // => true
+  console.log(cmp(c, d)); // => false
+  
+
+
+## 14.Take a multidimensional array and flat the array?
+
+* algorithm
+
+- Step 1. start program
+- Step 2. To create a muiltidimentional array.
+- Step 3. To use multi.flat to flat the array to single array.
+- Step 4. Print the Array.
+- Step 5. Stop.
+
+* psuedocode
+```
+BEGIN
+INIT multi = [1,4,2,3,[10,20,20], [100,500,700,600],
+[2000,1000]];
+PRINT (multi.flat(Infinity));
+END
+```
+* code
+```javascript
+let multi = [1,4,2,3,[10,20,20], [100,500,700,600],[2000,1000]];
+console.log(multi.flat(Infinity));
+```
+
+## 15. Group by the id of the following array of objects using the Array.reduce method?
+
+* algorithm
+
+- Step 1. Start the program.
+- Step 2. Initialize the array and its objects.
+- Step 3. TO use the reduce function to iterate previous value with current value.
+- Step 4. Check the both value and add count into previous value or make it one
+- Step 5. Print the value.
+- Step 6. Stop.
+
+* psuedocode
+```
+BEGIN
+INIT peoples=[{id :1 ,name:'edison'}]
+DECLARE groupByid = peoples.reduce((r,a)
+  r[a.id] = r[a.id] + 1 || 1;
+  RETURN r;
+PRINT groupByid; 
+END
+```
+* code
+```javascript
+var people = [{id: 1, name: 'edison' },{id: 2, name: 'Annand'}, 
+{id: 3, name: 'Vasnath'}];
+let groupbyid = people.reduce((r, a) => {
+  r[a.id]=a[r.id]+1 || 1
+   return r;
+  }, {});
+  console.log(groupbyid);
+```
+
+
+
+
+
 
 
 
