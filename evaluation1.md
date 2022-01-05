@@ -1,5 +1,6 @@
-## 1. Check prime number
-* algorithm
+### 1. Check prime number
+**algorithm**
+
   - step 1. Start the program.
   - step 2. Write a function with parameter and assign to a variable.
   - step 3. Check the number is n%2===0.
@@ -7,7 +8,7 @@
   - step 5. else it will return true.
   - step 6. stop
 
-* psuedocode
+**psuedocode**
 ```
 BEGIN
   FUNCTION isPrime(num)
@@ -20,7 +21,7 @@ BEGIN
 END
 ```  
  
- * code
+ **code**
 ```javascript
 function isPrime(num) {
     if (num % 2 === 0) {
@@ -30,19 +31,20 @@ function isPrime(num) {
 }
    console.log(isPrime(6));
 ```
-## 2.Diffence between == and === operator
+### 2.Diffence between == and === operator
  
 - The difference between == and === is that: == converts the variable values to the same type before performing comparison...
 - === does not do any type conversion (coercion) and returns true only if both values and types are identical for the two variables being compared.
 
-* algorithm
+**algorithm**
+
   - step 1. Start the program.
   - step 2. now assigning values to a variable.
   - step 3. Then compare the values to types.
   - step 4. after comparision it will print either true or false.
   - step 5. stop
 
-* psuedocode
+**psuedocode**
 ```
 BEGIN
   INIT a
@@ -54,7 +56,7 @@ BEGIN
   THEN
 END 
 ``` 
-* code
+**code**
 ```javascript
 var a = true;
 var b = 1;
@@ -63,9 +65,10 @@ console.log (a == b);
 console.log (a === c);
 console.log (a === b);
 ```
-## 3.how would you reverse a string in JavaScript?
+### 3.how would you reverse a string in JavaScript?
 
-* algorithm
+**algorithm**
+
   - step 1. Start the program.
   - step 2. create a function with reverse string.
   - step 3. initialize the new string to variables.
@@ -74,7 +77,7 @@ console.log (a === b);
   - step 6. print the result
   - step 7. stop
  
-* pseudocode
+**pseudocode**
 ```
  BEGIN
   FUNCTION reverseString(str)  
@@ -87,7 +90,7 @@ console.log (a === b);
   PRINT result
 END 
 ``` 
-* code 
+**code** 
 ```javascript
 function reverseString(str) {
     let newString = "";
@@ -101,9 +104,9 @@ const string = ('hello world');
 const result = reverseString(string);
 console.log(result);
 ```
-## 4. How would you reverse words in a sentence?
+### 4. How would you reverse words in a sentence?
 
-* algorithm
+**algorithm**
   
   - step 1. Start the program.
   - step 2. create a function with parameter of reverse.
@@ -113,7 +116,7 @@ console.log(result);
   - Step 5. Call the string function with string parameters
   - Step 6. Stop.
 
-* psuedocode
+**psuedocode**
 ```
 BEGIN
   FUNCTION reverse(word)
@@ -124,7 +127,7 @@ BEGIN
   SET word
   PRINT result
 ```    
-* code
+**code**
 ```javascript
 function reverse (word) {
     word = word.split(" ").reverse().join(" ")
@@ -135,9 +138,9 @@ word = 'i like this program very much'
 console.log(reverse(word))
 ```
 
-## 5. How will you verify a word as a palindrome? 
+### 5. How will you verify a word as a palindrome? 
 
-* algorithm
+**algorithm**
 
 - Step 1. Use strict mode as public.
 - Step 2. Create a function with string parameter
@@ -147,7 +150,7 @@ console.log(reverse(word))
 - Step 6. Then call the function with string parameter.
 - Step 7. Stop.
 
-* psuedocode
+**psuedocode**
 ```
 BEGIN
 FUNCTION checkPalindrome(str)
@@ -161,7 +164,7 @@ FUNCTION checkPalindrome(str)
 PRINT (checkPalindrome("redivider")
 PRINT (checkPalindrome("redivide")
 ```
-* code
+**code**
 ```javascript
 function checkPalindrome(str) {
     const len = str.length;
@@ -176,11 +179,12 @@ console.log(checkPalindrome("redivider"));
 console.log(checkPalindrome("karthi"));
 ```
 
-## 6.Write your own program to explain the difference between forEach and map?
-* Map() : If you use map then map can return new array by iterating main array.
-* Foreach() : If you use Foreach then it cannot return anything for each can iterating main array.
+### 6.Write your own program to explain the difference between forEach and map?
 
-* algorithm
+**Map()** : If you use map then map can return new array by iterating main array.
+**Foreach()** : If you use Foreach then it cannot return anything for each can iterating main array.
+
+**algorithm**
   
 - Step 1. start the program
 - Step 2. Create a array with number values.
@@ -189,14 +193,14 @@ console.log(checkPalindrome("karthi"));
 - Step 5. Print the values
 - Step 6. stop
 
-* psuedocode
+**psuedocode**
 ```
 BEGIN
 INIT numbers
 PRINT map(element => element * element)
 PRINT forEach(element => element * element) 
 ```
-* code
+**code**
 ```javascript
 const numbers = [5, 4, 3, 2, 1]
 console.log(numbers.map(element => element * element)) 
@@ -204,9 +208,9 @@ console.log(numbers.map(element => element * element))
 console.log(numbers.forEach(element => element * element))
 ```
 
-## 7.Generate a random number between 1 to 5?
+### 7.Generate a random number between 1 to 5?
 
-* algorithm
+**algorithm**
 
 - Step 1. start the program
 - Step 2. Use Math.floor to returns the largest integer less than or equal to a given number
@@ -215,21 +219,21 @@ console.log(numbers.forEach(element => element * element))
 - Step 6. Then print the number.
 - Step 7. Stop.
 
-* psuedocode
+**psuedocode**
 ```
 BEGIN
 INIT rndInt
 PRINT (Math.floor((Math.random() * 5) + 1));
 ```
-* code
+**code**
 ```javascript
 const rndInt = Math.floor(Math.random() * 5) + 1;
 console.log(rndInt);
 ```
 
-## 8. Remove duplicate from the following array?([1,2,9,4,5,8,3,5,1,4,5])
+### 8. Remove duplicate from the following array?([1,2,9,4,5,8,3,5,1,4,5])
 
-* algorithm
+**algorithm**
 
 - Step 1. start the program
 - Step 2. Create a array with number values.
@@ -238,7 +242,7 @@ console.log(rndInt);
 - Step 5. Print the values
 - Step 6. stop
 
-* psuedocode
+**psuedocode**
 ```
 BEGIN
 INIT numbers
@@ -246,16 +250,16 @@ INIT uniquenumbers
 SET numbers
 PRINT uniquenumbers
 ```
-* code
+**code**
 ```javascript
 let numbers = [1,2,9,4,5,8,3,5,1,4,5];
 let uniquenumbers = [...new Set(numbers)];
-
 console.log(uniquenumbers);
 ```
 
-## 9. Write a program to calculate the sum of the first 10 natural numbers.
-* algorithm
+### 9. Write a program to calculate the sum of the first 10 natural numbers.
+
+**algorithm**
 
 - Step 1. start the program.
 - Step 2. Declare two varibale sum = 0 , i = 1.
@@ -264,7 +268,7 @@ console.log(uniquenumbers);
 - Step 5. Print the value and call the function.
 - Step 6. Stop.
 
-* psuedocode
+**psuedocode**
 ```
 BEGIN
 INIT variable number
@@ -274,7 +278,7 @@ for i upto n increment i by 1 and i=1
 { sum=sum+i; } 
 PRINT sum; 
 ```
-* code
+**code**
 ```javascript
 let number=10;
 let sum = 0;
@@ -284,9 +288,9 @@ for (let i = 1; i <= number; i++) {
 
 console.log('The sum of natural numbers:', sum);
 ```
-## 10. Write a program to print the sum of the even and odd numbers for a given number?(100)
+### 10. Write a program to print the sum of the even and odd numbers for a given number?(100)
 
-* algorithm
+**algorithm**
 
 - Step 1. start the program
 - Step 2. Declare two variables odd and even with 0 value.
@@ -297,7 +301,7 @@ console.log('The sum of natural numbers:', sum);
 - Step 7. Stop.
 
 
-* psuedocode
+**psuedocode**
 ```
 BEGIN
   INIT a=100;
@@ -312,7 +316,7 @@ BEGIN
   PRINT ("The sum of odd numbers:",odd); 
 END
 ```  
-* code
+**code**
 ```javascript
 var a =100;
 odd_sum=0;even_sum=0;
@@ -326,9 +330,9 @@ for (i = 1; i <=a; i++)
 console.log("total odd numbers is", odd_sum);
 console.log("total even numbers", even_sum);
 ```
-## 11. Write a program to merge two arrays? 
+### 11. Write a program to merge two arrays? 
 
-* algorithm
+**algorithm**
 
 - Step 1. start the program.
 - Step 2. Declare two arrays arr1,arr2.
@@ -337,7 +341,7 @@ console.log("total even numbers", even_sum);
 - Step 5. Print the new array
 - Step 6. Stop.
 
-* psuedocode
+**psuedocode**
 ```
 BEGIN
 INIT arr1;
@@ -346,7 +350,7 @@ INIT arr2;
 ADD arr1,arr2 ;
 PRINT new array
 ``` 
-* code
+**code**
 ```javascript
 const arr1 = [1,2,9,3,5,1,4,5];
 const arr2 = [11,54,70,40];
@@ -355,9 +359,9 @@ const newarray = arr1.concat(arr2);
 console.log(newarray);
 ```
 
-## 12. Remove duplicate from an array of an object by id and name?
+### 12. Remove duplicate from an array of an object by id and name?
 
-* algorithm
+**algorithm**
 
 - Step 1. Start the program.
 - Step 2. initialize a constructor and array.
@@ -368,7 +372,7 @@ console.log(newarray);
 - Step 7. print the output.
 - Step 8. stop.
 
-* psuedocode
+**psuedocode**
 ```
 BEGIN
 INIT set();
@@ -382,7 +386,7 @@ PRINT a;
 END
 ```  
 
-* code
+**code**
 ```javascript
 let a = new Set();
 let arr = [
@@ -403,10 +407,21 @@ const filteredArr = arr.filter(values => {
 console.log(a);
 ```
 
-## 13.Compare two objects, If all properties are equal return true or return false?
+### 13.Compare two objects, If all properties are equal return true or return false?
 
-* algorithm
-* psuedocode
+**algorithm**
+
+- Step 1. Start the program.
+- Step 2. Initialize the objects.
+- Step 3. To create a function with object1,object2 parameters.
+- Step 4. To get the keys from two parameters then check both length.
+- Step 5. To check both of properties with if condition return the boolean values.
+- Step 6. Call the function with given properties.
+- Step 7. Print result
+- Step 8. Stop.
+
+
+**psuedocode**
 ```
 BEGIN
 INIT a,b,c and d
@@ -427,7 +442,7 @@ ENDFUNCTION
 END
 ```
 
-* code
+**code**
 ```javascript
 var a={id: 1, name: "edison"};
 var b={id: 1, name: "edison"};
@@ -451,9 +466,9 @@ function cmp(object1, object2) {
 ```  
   
 
-## 14.Take a multidimensional array and flat the array?
+### 14.Take a multidimensional array and flat the array?
 
-* algorithm
+**algorithm**
 
 - Step 1. start program
 - Step 2. To create a muiltidimentional array.
@@ -461,22 +476,22 @@ function cmp(object1, object2) {
 - Step 4. Print the Array.
 - Step 5. Stop.
 
-* psuedocode
+**psuedocode**
 ```
 BEGIN
 INIT multi = [1,4,2,3,[10,20,20], [100,500,700,600],[2000,1000]];
 PRINT (multi.flat(Infinity));
 END
 ```
-* code
+**code**
 ```javascript
 let multi = [1,4,2,3,[10,20,20], [100,500,700,600],[2000,1000]];
 console.log(multi.flat(Infinity));
 ```
 
-## 15. Group by the id of the following array of objects using the Array.reduce method?
+### 15. Group by the id of the following array of objects using the Array.reduce method?
 
-* algorithm
+**algorithm**
 
 - Step 1. Start the program.
 - Step 2. Initialize the array and its objects.
@@ -485,7 +500,7 @@ console.log(multi.flat(Infinity));
 - Step 5. Print the value.
 - Step 6. Stop.
 
-* psuedocode
+**psuedocode**
 ```
 BEGIN
 INIT peoples=[{id :1 ,name:'edison'}]
@@ -495,7 +510,7 @@ DECLARE groupByid = peoples.reduce((r,a)
 PRINT groupByid; 
 END
 ```
-* code
+**code**
 ```javascript
 var people = [{id: 1, name: 'edison' },{id: 2, name: 'Annand'}, 
 {id: 3, name: 'Vasnath'}];
@@ -506,9 +521,9 @@ let groupbyid = people.reduce((r, a) => {
   console.log(groupbyid);
 ```
 
-## 16. Write a program in Javascript to display the pattern like right angle triangle using an asterisk
+### 16. Write a program in Javascript to display the pattern like right angle triangle using an asterisk
 
-* algorithm
+**algorithm**
 
 - Step 1. Start the program.
 - Step 2. Declare one empty string and size.
@@ -516,7 +531,7 @@ let groupbyid = people.reduce((r, a) => {
 - Step 4. Then print the string.
 - Step 5. Stop.
 
-* psuedocode
+**psuedocode**
 ```
 BEGIN
 INIT string = "";
@@ -526,7 +541,7 @@ FOR(let i = 1; i <= size; i++)
 ENDFOR
 PRINT (string);
 ```
-* code
+**code**
 ```javascript
 var string = "";
 var size =5;
@@ -537,10 +552,19 @@ for(var i=1; i<=size; i++)
   console.log(string);
 }
 ```
-## 17. Write a program in Javascript to make such a pattern like right angle triangle with number increased by 1
+### 17. Write a program in Javascript to make such a pattern like right angle triangle with number increased by 1
 
-* algorithm
-* psuedocode
+**algorithm**
+
+Step 1. Start the program.
+Step 2. Declare empty string and nitialize the value of 4 
+Step 3. Initialize count with value of 1.
+Step 4. Run for loop 4 times then run the nested for loop i times.
+Step 5. Add the count value to a variable as string and it will execute "\n"
+Step 6. Print the string variable.
+Step 7. Stop.
+
+**psuedocode**
 ```
 BEGIN 
 INIT string = "";
@@ -556,7 +580,7 @@ ENDFOR
 PRINT (string);
 END
 ```
-* code
+**code**
 ```javascript
 let string = "";
 let size = 4; 
@@ -570,9 +594,9 @@ for (let i = 1; i <= size; i++) {
 }
 console.log(string);
 ```
-## 18. Write a program in Javascript to make such a pattern like a pyramid with numbers increased by 1
+### 18. Write a program in Javascript to make such a pattern like a pyramid with numbers increased by 1
 
-* algorithm
+**algorithm**
 
 - Step 1. start the program.
 - Step 2. Initialize count variable and one empty string.
@@ -582,7 +606,7 @@ console.log(string);
 - Step 6. print the value.
 - Step 7. Stop.
 
-* psuedocode
+**psuedocode**
 ```
 BEGIN
 INIT n;
@@ -601,7 +625,7 @@ FOR (let i = 1;i<n;i++)
   ENDFOR
 PRINT (number);
 ```
-* code
+**code**
 ```javascript 
 let n=5;
 let num = "";
@@ -620,9 +644,9 @@ for (let i = 1; i < n; i++) {
 console.log(num);
 ```
 
-# 19. Write a program in Javascript to display the pattern like a diamond?
+### 19. Write a program in Javascript to display the pattern like a diamond?
 
-* algorithm
+**algorithm**
 
 - Step 1. Start the program.
 - Step 2. Initialize n variable and empty string.
@@ -632,7 +656,7 @@ console.log(num);
 - Step 6. print the values.
 - Step 7. Stop
 
-* psuedocode
+**psuedocode**
 ```
 BEGIN
 INIT n = 5;
@@ -658,7 +682,7 @@ ENDFOR
 PRINT (string);
 END
 ```
-* code
+**code**
 ```javascript
 let n = 5;
 let string= "";
