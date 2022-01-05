@@ -620,7 +620,7 @@ for (let i = 1; i < n; i++) {
 console.log(num);
 ```
 
-## 19. Write a program in Javascript to display the pattern like a diamond?
+# 19. Write a program in Javascript to display the pattern like a diamond?
 
 * algorithm
 
@@ -690,39 +690,69 @@ for (let i = 1; i <= n - 1; i++) {
 console.log(string);
 ```
 
-## Explain the following terms console.log().console.count()?
+# 20.Explain the following terms console.log().console.count()?
 
-* console.log();
+**console.log();** 
 
-- The log() method is useful for testing purposes.
+  - The log() method is useful for testing purposes.
+
+**code**  
 ```javascript
 console.log("hell0");
 ```
 
+**console dir();**
+ 
+  - if you want to look at all the object’s properties and methods,you can use console.dir method
 
-
-
-
-//console log
-
-//console.dir
+**code**
+```javascript
 let object = { property1 : 1, property1 : 2, method : function(){} };
-console.dir(object);
-//cosole.count
+console.dir(object);  
+```
+
+**console.count()**
+
+  - The console.count() method logs the number of times that this particular call to count() has been called.
+
+**code**
+```javascript
 for (let i = 0; i < 5; i++) {
     console.count("myLabel");
 }
-//console.table
+```
+
+**console.table**
+
+  - The console.table() method displays tabular data as a table.
+
+**code**
+```javascript
 var arr1=["Audi", "Volvo", "Ford"]
 console.table(arr1);
-//console.time()andtimeEnd()
+```
+
+**console time() and console.timeEnd()**
+
+  - The **console.time()** method starts a timer you can use to track how long an operation takes.
+  - The **console.timeEnd()** stops a timer that was previously started by calling console.time().
+
+**code** 
+```javascript
 console.time();
 let arr = Array(1000);
 for(let i=0; i<arr.length; i++) {
 arr[i] = new Object();
 }
-console.timeEnd();  
-//console.trace()
+console.timeEnd(); 
+```
+
+**console.trace()**
+
+  - The trace() method displays a trace that show how the code ended up at a certain point.
+
+**code**
+```javascript  
 function foo() {
     function bar() {
       console.trace();
@@ -730,19 +760,54 @@ function foo() {
     bar();
   }
     foo();
-//console group and groupEnd
+```
+
+**console.group() and group end()**
+
+  - The **group()** method starts a message group.All new messages will be written inside this group.
+  - The **groupEnd()** ends a message group.
+
+**code**
+```javascript
 console.log("Hello world!");
 console.group();
 console.log("Hello again, this time inside a group!");
 console.groupEnd();
-console.log("and we are back.");    
-//console.assert
+console.log("and we are back.");  
+```
+
+**console.assert()**
+
+  - The **console.assert()** method writes an error message to the console if the assertion is   false. If the assertion is true, nothing happens.
+
+**code**
+```javascript
 function assert(condition, message) {
     if (!condition) {
         throw message || "Assertion failed";
     }
 }
 assert();
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
