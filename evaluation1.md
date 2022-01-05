@@ -31,6 +31,9 @@ function isPrime(num) {
 }
    console.log(isPrime(6));
 ```
+**output**
+
+ false
 ### 2.Diffence between == and === operator
  
 - The difference between == and === is that: == converts the variable values to the same type before performing comparison...
