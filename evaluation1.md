@@ -32,8 +32,8 @@ function isPrime(num) {
    console.log(isPrime(6));
 ```
 **output**
-```
- false
+```console
+false
  ```
 ### 2.Diffence between == and === operator
  
@@ -68,6 +68,12 @@ var c = true;
 console.log (a == b); 
 console.log (a === c);
 console.log (a === b);
+```
+**output**
+```console
+true
+true
+false
 ```
 ### 3.how would you reverse a string in JavaScript?
 
@@ -108,6 +114,11 @@ const string = ('hello world');
 const result = reverseString(string);
 console.log(result);
 ```
+**output**
+```console
+dlrow olleh
+```
+
 ### 4. How would you reverse words in a sentence?
 
 **algorithm**
@@ -140,6 +151,10 @@ function reverse (word) {
 }
 word = 'i like this program very much'
 console.log(reverse(word))
+```
+**output**
+```console
+much very program this like i
 ```
 
 ### 5. How will you verify a word as a palindrome? 
@@ -182,6 +197,12 @@ function checkPalindrome(str) {
 console.log(checkPalindrome("redivider"));
 console.log(checkPalindrome("karthi"));
 ```
+**output**
+```console
+The string is a palindrome
+NOT a palindrome
+```
+
 
 ### 6.Write your own program to explain the difference between forEach and map?
 
@@ -205,11 +226,30 @@ PRINT map(element => element * element)
 PRINT forEach(element => element * element) 
 ```
 **code**
+**forEach**
+```javascript
+const myAwesomeArray = [
+    { id: 1, name: "john" },
+    { id: 2, name: "Ali" },
+    { id: 3, name: "Mass" },
+  ]
+myAwesomeArray.forEach(element => console.log(element.name))
+```
+**output**
+```console
+john
+Ali
+Mass
+```
+**code**
+**map**
 ```javascript
 const numbers = [5, 4, 3, 2, 1]
 console.log(numbers.map(element => element * element)) 
-
-console.log(numbers.forEach(element => element * element))
+```
+**output**
+```console
+[25,16,9,4,1]
 ```
 
 ### 7.Generate a random number between 1 to 5?
@@ -233,6 +273,13 @@ PRINT (Math.floor((Math.random() * 5) + 1));
 ```javascript
 const rndInt = Math.floor(Math.random() * 5) + 1;
 console.log(rndInt);
+```
+**output**
+```console
+4
+3
+2
+1
 ```
 
 ### 8. Remove duplicate from the following array?([1,2,9,4,5,8,3,5,1,4,5])
@@ -259,6 +306,10 @@ PRINT uniquenumbers
 let numbers = [1,2,9,4,5,8,3,5,1,4,5];
 let uniquenumbers = [...new Set(numbers)];
 console.log(uniquenumbers);
+```
+**output**
+```console
+[1,2,9,4,5,8,3]
 ```
 
 ### 9. Write a program to calculate the sum of the first 10 natural numbers.
@@ -291,6 +342,10 @@ for (let i = 1; i <= number; i++) {
 }
 
 console.log('The sum of natural numbers:', sum);
+```
+**output**
+```console
+The sum of natural numbers:55
 ```
 ### 10. Write a program to print the sum of the even and odd numbers for a given number?(100)
 
@@ -334,6 +389,12 @@ for (i = 1; i <=a; i++)
 console.log("total odd numbers is", odd_sum);
 console.log("total even numbers", even_sum);
 ```
+**code**
+```console
+total odd numbers is 2500
+total even numbers is 2550
+```
+
 ### 11. Write a program to merge two arrays? 
 
 **algorithm**
@@ -361,6 +422,10 @@ const arr2 = [11,54,70,40];
 
 const newarray = arr1.concat(arr2); 
 console.log(newarray);
+```
+**output**
+```console
+[1,2,9,3,5,1,4,5,11,54,70,40]
 ```
 
 ### 12. Remove duplicate from an array of an object by id and name?
@@ -410,6 +475,12 @@ const filteredArr = arr.filter(values => {
 });
 console.log(a);
 ```
+**output**
+```console
+Set {
+  1,'Stephen covey',2,'Robin Sharma',3,'Tolstoy',4,'James clear'
+}
+```
 
 ### 13.Compare two objects, If all properties are equal return true or return false?
 
@@ -451,7 +522,7 @@ END
 var a={id: 1, name: "edison"};
 var b={id: 1, name: "edison"};
 var c={id: 1, name: "edison"};
-var d={id: 1, name: "edison"};
+var d={id: 2, name: "edison"};
 function cmp(object1, object2) {
     const keys1 = Object.keys(object1);
     const keys2 = Object.keys(object2);
@@ -467,8 +538,12 @@ function cmp(object1, object2) {
   }
   console.log(cmp(a, c)); // => true
   console.log(cmp(c, d)); // => false
-```  
-  
+```
+**output**
+```console
+true
+false
+```
 
 ### 14.Take a multidimensional array and flat the array?
 
@@ -491,6 +566,15 @@ END
 ```javascript
 let multi = [1,4,2,3,[10,20,20], [100,500,700,600],[2000,1000]];
 console.log(multi.flat(Infinity));
+```
+**output**
+```console
+[
+     1,   4,   2,    3,
+    10,  20,  20,  100,
+   500, 700, 600, 2000,
+  1000
+]
 ```
 
 ### 15. Group by the id of the following array of objects using the Array.reduce method?
@@ -524,6 +608,10 @@ let groupbyid = people.reduce((r, a) => {
   }, {});
   console.log(groupbyid);
 ```
+**output**
+```console
+{ '1': 1, '2': 1, '3': 1 }
+```
 
 ### 16. Write a program in Javascript to display the pattern like right angle triangle using an asterisk
 
@@ -555,6 +643,14 @@ for(var i=1; i<=size; i++)
   string= string+"*";
   console.log(string);
 }
+```
+**output**
+```console
+*
+**
+***
+****
+*****
 ```
 ### 17. Write a program in Javascript to make such a pattern like right angle triangle with number increased by 1
 
@@ -598,6 +694,14 @@ for (let i = 1; i <= size; i++) {
 }
 console.log(string);
 ```
+**output**
+```console
+1
+2 3
+4 5 6
+7 8 9 10
+```
+
 ### 18. Write a program in Javascript to make such a pattern like a pyramid with numbers increased by 1
 
 **algorithm**
@@ -646,6 +750,13 @@ for (let i = 1; i < n; i++) {
   num += "\n";
 }
 console.log(num);
+```
+**output**
+```console
+   1
+  2 3
+ 4 5 6
+7 8 9 10
 ```
 
 ### 19. Write a program in Javascript to display the pattern like a diamond?
@@ -717,6 +828,18 @@ for (let i = 1; i <= n - 1; i++) {
 }
 console.log(string);
 ```
+**output**
+```console
+    *
+   ***
+  *****
+ *******
+*********
+ *******
+  *****
+   *** 
+    *
+```
 
 ### 20.Explain the following terms console.log().console.count()?
 
@@ -728,7 +851,10 @@ console.log(string);
 ```javascript
 console.log("hell0");
 ```
-
+**output**
+```console
+hello
+```
 **console dir();**
  
   - if you want to look at all the object’s properties and methods,you can use console.dir method
@@ -738,7 +864,10 @@ console.log("hell0");
 let object = { property1 : 1, property1 : 2, method : function(){} };
 console.dir(object);  
 ```
-
+**output**
+```console
+{ property: 1, prop1: 2, method: [Function: method] }
+```
 **console.count()**
 
   - The console.count() method logs the number of times that this particular call to count() has been called.
@@ -748,6 +877,14 @@ console.dir(object);
 for (let i = 0; i < 5; i++) {
     console.count("myLabel");
 }
+```
+**output**
+```console
+myLabel: 1
+myLabel: 2
+myLabel: 3
+myLabel: 4
+myLabel: 5
 ```
 
 **console.table**
@@ -759,7 +896,6 @@ for (let i = 0; i < 5; i++) {
 var arr1=["Audi", "Volvo", "Ford"]
 console.table(arr1);
 ```
-
 **console time() and console.timeEnd()**
 
   - The **console.time()** method starts a timer you can use to track how long an operation takes.
@@ -773,6 +909,10 @@ for(let i=0; i<arr.length; i++) {
 arr[i] = new Object();
 }
 console.timeEnd(); 
+```
+**output**
+```console
+default: 0.45703125 ms
 ```
 
 **console.trace()**
@@ -789,6 +929,12 @@ function foo() {
   }
     foo();
 ```
+**output**
+```console
+bar	
+foo	
+(anonymous)
+```
 
 **console.group() and group end()**
 
@@ -803,6 +949,12 @@ console.log("Hello again, this time inside a group!");
 console.groupEnd();
 console.log("and we are back.");  
 ```
+**output**
+```console
+Hello world!
+Hello again, this time inside a group!
+and we are back.
+```
 
 **console.assert()**
 
@@ -816,6 +968,10 @@ function assert(condition, message) {
     }
 }
 assert();
+```
+**output**
+```console
+Assertion failed
 ```
 
 
