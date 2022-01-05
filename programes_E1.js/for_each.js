@@ -1,5 +1,11 @@
-const numbers = [5, 4, 3, 2, 1]
-console.log(numbers.map(element => element * element)) 
+const myAwesomeArray = [
+    { id: 1, name: "john" },
+    { id: 2, name: "Ali" },
+    { id: 3, name: "Mass" },
+  ]
+myAwesomeArray.forEach(element => console.log(element.name))
 
-console.log(numbers.forEach(element => element * element))
-
+/*const newArray = [5, 4, 3, 2, 1]
+newArray.map(x => x * x)*/
+  
+ 
