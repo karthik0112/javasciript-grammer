@@ -161,7 +161,7 @@ much very program this like i
 
 **algorithm**
 
-- Step 1. Use strict mode as public.
+- Step 1. Start the program.
 - Step 2. Create a function with string parameter
 - Step 3. Initialise the varibale to know the length of string.
 - Step 4. Run the for loop for iteration of half word.
