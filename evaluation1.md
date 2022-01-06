@@ -896,6 +896,16 @@ myLabel: 5
 var arr1=["Audi", "Volvo", "Ford"]
 console.table(arr1);
 ```
+**output**
+```
+┌─────────┬─────────┐
+│ (index) │ Values  │
+├─────────┼─────────┤
+│    0    │ 'Audi'  │
+│    1    │ 'Volvo' │
+│    2    │ 'Ford'  │
+└─────────┴─────────┘
+```
 **console time() and console.timeEnd()**
 
   - The **console.time()** method starts a timer you can use to track how long an operation takes.
