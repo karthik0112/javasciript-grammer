@@ -356,7 +356,7 @@ The sum of natural numbers:55
 - Step 3. Iterate for loop till 100 times.
 - Step 4. if(i % 2 == 0) then print even numbers
 - Step 5. else print odd numbers.
-- Step 6. Call the function.
+- Step 6. Print result
 - Step 7. Stop.
 
 
@@ -364,9 +364,9 @@ The sum of natural numbers:55
 ```
 BEGIN
   INIT a=100;
-  INIT even=0,odd=0;
-  FOR(let i=0;i<=value;i++) DO
-    IF (i % 2 == 0) THEN
+  INIT ,odd_sum=0;even_sum=0
+  FOR(let i=0;i<=value;i++) 
+    IF (i % 2 == 0) 
       even = even + i;
     ELSE 
       odd = odd + i;
@@ -592,21 +592,29 @@ console.log(multi.flat(Infinity));
 ```
 BEGIN
 INIT peoples=[{id :1 ,name:'edison'}]
-DECLARE groupByid = peoples.reduce((r,a)
-  r[a.id] = r[a.id] + 1 || 1;
-  RETURN r;
+DECLARE groupByid = peoples.reduce((acc,curr)
+  IF(acc[curr.id])
+  acc[curr.id]=++acc[curr.id]
+  ELSE
+  acc[curr.id]=1
+  RETURN acc;
 PRINT groupByid; 
 END
 ```
 **code**
 ```javascript
 var people = [{id: 1, name: 'edison' },{id: 2, name: 'Annand'}, 
-{id: 3, name: 'Vasnath'}];
-let groupbyid = people.reduce((r, a) => {
-  r[a.id]=a[r.id]+1 || 1
-   return r;
+{id: 3, name: 'Vasnath'},{id: 1, name: 'edison' }];
+let groupbyid = people.reduce(function(acc, curr){
+  if(acc[curr.id]){
+  acc[curr.id]=++acc[curr.id]
+  }else{
+    acc[curr.id]=1
+  }
+  return acc;
   }, {});
   console.log(groupbyid);
+
 ```
 **output**
 ```console
