@@ -11,5 +11,5 @@ const newArray = [5, 4, 3, 2, 1]
 function item(x){
   return x*x
 }
-  console.log(newArray.map(item));
+ console.log(newArray.map(item));
  
