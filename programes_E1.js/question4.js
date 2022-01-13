@@ -1,6 +1,7 @@
 function reverse (word) {
     word = word.split(" ").reverse().join(" ")
-    return word
+    //return word
+    console.log(word);
 
 }
 word = 'i like this program very much'
