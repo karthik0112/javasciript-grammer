@@ -618,7 +618,7 @@ let groupbyid = people.reduce(function(acc, curr){
 ```
 **output**
 ```console
-{ '1': 1, '2': 1, '3': 1 }
+{ '1': 2, '2': 1, '3': 1 }
 ```
 
 ### 16. Write a program in Javascript to display the pattern like right angle triangle using an asterisk
