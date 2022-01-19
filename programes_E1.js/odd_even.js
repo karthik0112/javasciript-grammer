@@ -1,6 +1,6 @@
-var a =100;
+const odd_even =100;
 odd_sum=0;even_sum=0;
-for (i = 1; i <=a; i++)
+for (i = 1; i <=odd_even; i++)
     {
         if (i % 2 == 0)
             even_sum = even_sum + i;

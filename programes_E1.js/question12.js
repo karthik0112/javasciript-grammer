@@ -1,5 +1,5 @@
-let a = new Set();
-let arr = [
+let removeDuplicate = new Set();
+let array = [
     {id: 1, name: 'Stephen covey'},
     {id: 2, name: 'Robin Sharma' }, 
     {id: 3, name: 'Tolstoy'}, 
@@ -7,14 +7,14 @@ let arr = [
     {id: 5, name: 'James clear'}
 ];
 
-const filteredArr = arr.filter(values => {
-  const duplicate1= a.has(values.id);
-  a.add(values.id);
-  const duplicate2= a.has(values.id);
-  a.add(values.name);
+const filteredArr = array.filter(values => {
+  const duplicate1= removeDuplicate.has(values.id);
+  removeDuplicate.add(values.id);
+  const duplicate2= removeDuplicate.has(values.id);
+  removeDuplicate.add(values.name);
   return !duplicate1,!duplicate2 ;
 });
-console.log(a);
+console.log(removeDuplicate);
 
 
 
