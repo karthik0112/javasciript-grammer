@@ -11,7 +11,7 @@ const person = {
     lastName   : "Doe",
     id         : 5566,
     myFunction : function() {
-      return this;
+      return this.lastName;
     }
   };
-  console.log(person);
+  console.log(person.myFunction());

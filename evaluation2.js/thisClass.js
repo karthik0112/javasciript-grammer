@@ -1,7 +1,8 @@
-function person() {
+function Person() {
     this.firstName = "unknown";
     this.lastName = "unknown";
 }
+console.log(this.Person);
 
 var person1 = new Person();
 person1.firstName = "Steve";
