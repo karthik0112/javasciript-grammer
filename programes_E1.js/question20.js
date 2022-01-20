@@ -8,13 +8,13 @@ for (let i = 0; i < 5; i++) {
     console.count("myLabel");
 }
 //console.table
-var arr1=["Audi", "Volvo", "Ford"]
-console.table(arr1);
+const array=["Audi", "Volvo", "Ford"]
+console.table(array);
 //console.time()andtimeEnd()
 console.time();
-let arr = Array(1000);
-for(let i=0; i<arr.length; i++) {
-arr[i] = new Object();
+const array1 = Array(1000);
+for(let i=0; i<array1.length; i++) {
+array1[i] = new Object();
 }
 console.timeEnd();  
 //console.trace()
