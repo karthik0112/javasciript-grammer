@@ -7,6 +7,7 @@
 }
 console.log(calculateVolume(4)(5)(6));*/
 
+"use strict";
 function calculateVolume(length,breadth,height) {
     return length*breadth*height;
 }

@@ -1,10 +1,11 @@
-var num =("200");
+"use strict";
+const checkPrime =("200");
 
-for(var i=2; i<=num;i++){
+for( let i=2; i<=checkPrime;i++){
 
-        var isPrime = true;
+        let isPrime = true;
 
-        for(var j=2; j<i; j++){
+        for(let j=2; j<i; j++){
             if(i%j === 0 && i !== j){
                 isPrime = false;
             }

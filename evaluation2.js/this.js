@@ -5,7 +5,7 @@
 Orange();
 let orange=new Orange();*/
 
-
+"use strict";
 const person = {
     firstName  : "John",
     lastName   : "Doe",
