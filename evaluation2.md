@@ -24,12 +24,14 @@ END
  
  **code**
 ```javascript
-var num =("200");
-for(var i=2; i<=num;i++){
+"use strict";
+const checkPrime =("200");
 
-        var isPrime = true;
+for( let i=2; i<=checkPrime;i++){
 
-        for(var j=2; j<i; j++){
+        let isPrime = true;
+
+        for(let j=2; j<i; j++){
             if(i%j === 0 && i !== j){
                 isPrime = false;
             }
@@ -110,10 +112,11 @@ END
 
 **code**
 ```javascript
-var a = [1,2,3,4,5,6,7,8,9,10];
-var b = [2,4,5,7,11,15];
-var c = a.filter(value => b.includes(value))
-console.log(c);
+"use strict";
+const Array1 = [1,2,3,4,5,6,7,8,9,10];
+const Array2 = [2,4,5,7,11,15];
+const filteredArray = Array1.filter(value => Array2.includes(value))
+console.log(filteredArray);
 ```
 **output**
 ```console
@@ -212,6 +215,7 @@ END
 
 **code**
 ```javascript
+"use strict";
 let show = function() {
     console.log('Anonymous function');//assigning function to variables
 };
@@ -252,6 +256,8 @@ END
 
 **code**
 ```javascript
+"use strict";
+let f = function(){return "This is function";}
 function fun(func){
     //Call the function but only if it is a function:
     if(typeof func == "function")
@@ -259,12 +265,22 @@ function fun(func){
       else
       console.log("Its not a function");
 }
-var array = [];
-var f = function () {}
-fun(array);//pass array instead of function
+
+fun(f);
+fun();
+
+/*let obj = {};
+let f = function(){return "This is function";}
+
+function myFunction(func){  
+    (typeof func == "function")?console.log(func()):console.log("This is not function");   
+}   
+myFunction(obj);     //pass object instead of function 
+myFunction(f);*/
 ```
 **output**
 ```console
+This is function 
 Its not a function
 ```
 
@@ -294,6 +310,7 @@ END
 
 **code**
 ```javascript
+"use strict";
 const person = {
     firstName  : "John",
     lastName   : "Doe",
@@ -315,32 +332,30 @@ Doe
 
   - step 1. Start the program.
   - step 2. To create object and its properties.
-  - step 3. RETURN this.lastname
+  - step 3. RETURN this function
   - step 4. Print result
   - step 5.Stop. 
   
 **psuedocode**
 ```
 BEGIN
- DECLARE person
-   FUNCTION myFunction:function()
-    RETURN this.lastname
+   FUNCTION thisFunction=function()
+    RETURN this
    ENDFUNCTION
- PRINT person.myFunction()
+  INIT obj= new thisFunction();
+ PRINT obj;
 END 
 ```  
 
 **code**
 ```javascript
-const person = {
-    firstName  : "John",
-    lastName   : "Doe",
-    id         : 5566,
-    myFunction : function() {
-      return this.lastname;
-    }
-  };
-  console.log(person.myFunction());
+"use strict";
+//'this' inside function
+let thisFunction = function () {
+    return this;
+};
+let obj = new thisFunction();
+console.log(obj);
 ```
 **output**
 ```console
@@ -373,6 +388,7 @@ END
 
 **code**
 ```javascript
+"use strict";
 let number = [24,24,2,4,56,85,63];
 let condition = number.map(value => value + 1);//map
 console.log(condition);
@@ -398,7 +414,7 @@ console.log(condition);
 BEGIN
  DECLARE number
  INIT condition
- SET number.map(value => value < 10)
+ SET number (value => value < 10)
  SET filtered=number.filter(condition)
  PRINT filtered
 END 
@@ -406,6 +422,7 @@ END
 
 **code**
 ```javascript
+"use strict";
 let number = [0,10,2,3,4,5,6,7]
 let condition = value => value < 10;
 let filtered = number.filter(condition); 
@@ -438,6 +455,7 @@ END
 ```  
 **code**
 ```javascript
+"use strict";
 const array1 = [1, 2, 3, 4];
 const reducer = (previousValue, currentValue) => previousValue + currentValue;
 console.log(array1.reduce(reducer));
@@ -445,6 +463,70 @@ console.log(array1.reduce(reducer));
 **output**
 ```console
 10
+```
+
+### 8. Count Total number of zeros from 1 up to 50
+
+**algorithm**
+
+- Step 1. Use Strict mode as global.
+- Step 2. Create two variables globally. Then convert it to string for validation of float
+- Step 3. Validate it of number and float. Create a variable with 0.
+- Step 4. Use for loop to iterate the number and convert it to string.
+- Step 5. Split the number by 0 then make it count to a varibale.
+- Step 6. Then print the value.
+  
+**psuedocode**
+```
+BEGIN
+"use strict";
+INIT start = 1;
+INIT end = 50;
+INIT startConvertToString = start + "" ;
+INIT endConvertToString = end + "" ;
+IF(typeof start === "number" && typeof end === "number" )THEN
+   IF(startConvertToString.indexOf(".") === -1 && endConvertToString.indexOf(".") === -1)THEN
+        INIT count = 0;
+        FOR (let i = start ; i <= end ; i++ ) DO
+            INIT numberToString = i + "" ;
+            SET count += numberToString.split("0").length - 1;
+        ENDFOR
+        PRINT(count);
+    ELSE
+        PRINT("The float value not accepted"); 
+    ENDIF
+ELSE
+    PRINT("The string value not accepted");
+ENDIF
+```  
+
+**code**
+```javascript
+"use strict";
+//give input range find number of zero
+const start = 1;
+const end = 50;
+//convert input value to string
+const startConvertToString = start + "" ;
+const endConvertToString = end + "" ;
+// check if type of value is number or not 
+if(typeof start === "number" && typeof end === "number" ){
+   if(startConvertToString.indexOf(".") === -1 && endConvertToString.indexOf(".") === -1){
+        let count = 0;
+        for(let i = start ; i <= end ; i++ ){
+            let numberToString = i + "" ;
+            //split the number by 0 and add length - 1 to count
+            count += numberToString.split("0").length - 1;
+        }
+        console.log(count);
+    }
+    else{
+        console.log("The float value not accepted"); 
+    }
+}
+else{
+    console.log("The string value not accepted");
+}
 ```
 
 ### 9. The following array of numbers show the missing number? ([1,2,3,5,6])
@@ -467,13 +549,62 @@ END
 ```  
 **code**
 ```javascript
-const arr = [1,2,3,5];
-r=arr.find((x,i) => arr[i+1]-x > 1) + 1;
-console.log(r);
+"use strict";
+const findMissingNumber = (array) => {
+    for (let i = 1; i <= array.length; i++) {
+      if (array[i - 1] !== i) {
+        return i;
+      }
+    }
+  }
+  const array = [1, 2, 3, 5];
+  console.log(findMissingNumber(array));
 ```
-**output**
+
+
+### 10. Write a program for calculating age using Date of birth? (1990)
+
+**Algorithm**
+- Step 1. Use Strict mode as global.
+- Step 2. Create a function with a parameter of age.
+- Step 3. Check the validation of the input.
+- Step 4. Get today date by Date() and get the year from date.
+- Step 5. Subract current year from birth year.
+- Step 6. Call the function.
+
+**Psuedocode**
+```markdown
+BEGIN
+"use strict"
+INIT year_born
+FUNCTION getAge(birthYear)
+    INIT year = new Date();
+    INIT currentYear = year.getFullYear();
+    INIT age = currentYear - birthYear;
+    PRINT(age);
+ENDIF 
+FUNCTION END
+END
+```
+
+**code**
+```javascript
+"use strict";
+const year_born = 2000;
+let d = new Date();
+let n = d.getFullYear();
+function getAge(birthYear){
+	let currentDate = new Date();
+    let currentYear = currentDate.getFullYear();
+    const age = currentYear - birthYear;
+    return age;
+}
+const calculatedAge = getAge(year_born);
+console.log("your age is " +  calculatedAge);
+```
+*Output:*
 ```console
-4
+22
 ```
 
 ### 11. In the Javascript function, what are the differences between call by value and reference?
@@ -495,21 +626,23 @@ console.log(r);
 **psuedocode**
 ```
 BEGIN
- DECLARE c
- SET d equals c;
- SET c equal 3
- PRINT c
- PRINT d
+ DECLARE  valueC
+ SET valueD equals valueC;
+ SET valueC equal 3
+ PRINT valueC
+ PRINT valueD
 END 
 ```  
 **code**
 ```javascript
-var c = 5;//call by value
-var d;
-d = c;
-c = 3;
-console.log(c);
-console.log(d);
+
+"use strict";
+let valueC = 5;//call by value
+let valueD;
+valueD= valueC;
+valueC = 3;
+console.log(valueC);
+console.log(valueD);
 ```
 **output**
 ```console
@@ -542,6 +675,7 @@ END
 ```  
 **code**
 ```javascript
+"use strict";
 let a={p:2}//call by reference
 let y=a;
 a.p=7;
@@ -551,6 +685,79 @@ console.log(y.p);
 ```console
 7
 ```
+
+
+### 12. What is Arity in Javascript? Explain with a real time example.
+
+ - The arity property used to return the number of arguments expected by the function.
+ - You can access function’s arity via Function.length property.
+
+**Algorithm**
+
+- Step 1. Use Strict mode as global. 
+- Step 2. Create a funciton with 3 parameters.
+- Step 3. Get the length of details and assign to a variable.
+- Step 4. Print the variable.
+
+**Psuedocode**
+```console
+BEGIN
+"use strict";
+FUNCTION f(a,b,c)
+FUNCTION END
+INIT arity=f.length
+PRINT(arity);
+```
+
+**code**
+```javascript
+"use strict";
+function f(a,b,c){}
+let arity = f.length;
+console.log(arity);
+```
+*Output:*
+
+```console
+3
+```
+
+
+## 13. What is Currying in Javascript? Explain with a real time example.
+
+ - Currying is a transformation of functions that translates a function from callable as f(a, b, c) into callable as f(a)(b)(c).
+ - Currying doesn’t call a function. It just transforms it.
+
+**Algorithm**
+- Step 1. Use Strict mode as global. 
+- Step 2. Create a function with parameter and assign to a variable.
+- Step 3. Return a the function inside the return function return another function with parameter.
+- Step 4. print calculateVolume
+
+**Psuedocode**
+```console
+BEGIN
+"use strict";
+FUNCTION calculateVolume(length,breadth,height)
+  RETURN length*breadth*height;
+  PRINT calculateVolume
+```
+
+**code**
+```javascript
+"use strict";
+function calculateVolume(length,breadth,height) {
+    return length*breadth*height;
+}
+console.log(calculateVolume(4,5,6));
+```
+
+*Output:*
+```console
+120
+```
+
+
 ### 14. What is ES6?
 
 * JavaScript ES6 (also known as ECMAScript 2015 or ECMAScript 6) is the newer version of JavaScript that was introduced in 2015.
@@ -581,6 +788,7 @@ END
 
 **code**
 ```javascript
+"use strict";
 setTimeout(function() {
     console.log('Execute later after 1 second')//anonymous function
 }, 1000);
@@ -653,6 +861,7 @@ END
 
 **code**
 ```javascript
+"use strict";
 let show = function() {
     console.log('Anonymous function');//assigning function to variables
 };
