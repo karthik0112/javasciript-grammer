@@ -1,9 +1,9 @@
 "use strict";
 //'this' inside function
-let thisFunction = function () {
+const thisFunction = function () {
     return this;
 };
-let obj = new thisFunction();
+const obj = new thisFunction();
 console.log(obj);
 
 
@@ -15,5 +15,5 @@ class thisClass{
       return this;
     }
 }
-let obj = new thisClass();
+const obj = new thisClass();
 console.log(obj);*/

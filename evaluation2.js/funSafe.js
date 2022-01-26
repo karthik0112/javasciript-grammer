@@ -1,5 +1,5 @@
 "use strict";
-let f = function(){return "This is function";}
+const f = function(){return "This is function";}
 function fun(func){
     //Call the function but only if it is a function:
     if(typeof func == "function")
