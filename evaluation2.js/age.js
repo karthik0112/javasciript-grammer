@@ -1,7 +1,5 @@
 "use strict";
 const year_born = 2000;
-let d = new Date();
-let n = d.getFullYear();
 function getAge(birthYear){
 	let currentDate = new Date();
     let currentYear = currentDate.getFullYear();

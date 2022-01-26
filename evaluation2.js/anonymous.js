@@ -1,5 +1,5 @@
 "use strict";
-let show = function() {
+const show = function() {
     console.log('Anonymous function');//assigning function to variables
 };
 
