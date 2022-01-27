@@ -6,9 +6,12 @@
 
 let newArr = array.concat(); 
 console.log(newArr);*/
-const arr =[1,4,2,3,[10,20,20], [100,500,700,600],[2000,1000]]  
+const Array = [1,4,2,3,[10,20,20], [100,500,700,600],[2000,1000]]
+let newArray = [];
 
-// To flat single level array
-// is equivalent to
-arr.reduce((acc, val) => acc.concat(val), []);
-console.log(arr);
+for(let i = 0; i < Array.length; i++)
+{
+    newArray = newArray.concat(Array[i]);
+}
+
+console.log(newArray);
