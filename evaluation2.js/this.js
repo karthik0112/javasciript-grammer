@@ -4,12 +4,15 @@
 }
 Orange();
 let orange=new Orange();*/
-"use strict";
+
+//"use strict";
+console.log(this);
 const person = {
     firstName  : "John",
     lastName   : "Doe",
     id         : 5566,
-    myFunction : function() {
+    myFunction : ()=> {
+    console.log(this);
       return this.lastName;
     
     }
