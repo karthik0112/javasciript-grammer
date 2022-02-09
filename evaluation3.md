@@ -4,12 +4,12 @@
 
 **Algorithm**
 
-Step 1. Use strict mode as public. Declare a variable with a value.
-Step 2. Declare arrow function and access the variable a by this.name
-Step 3. Create arrow function inside a object and call the variable a by this.name
-Step 4. Create a object and create a property with value and a arrow function.
-Step 5. Access the value from arrow function.
-Step 6. Call the function.
+- Step 1. Use strict mode as public. Declare a variable with a value.
+- Step 2. Declare arrow function and access the variable a by this.name
+- Step 3. Create arrow function inside a object and call the variable a by this.name
+- Step 4. Create a object and create a property with value and a arrow function.
+- Step 5. Access the value from arrow function.
+- Step 6. Call the function.
 
 
 **Psuedocode**
