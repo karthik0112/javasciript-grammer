@@ -1,7 +1,12 @@
-"use strict";
-//create a new custom event  “start”
-let startEvent = new Event("start");
-//listen for the "start" event
-document.addEventListener("start",function(event){console.log("hello world");console.log(event);},false);
-//dispatch the “start” event
-document.dispatchEvent(startEvent);
+let info = {
+  detail: {position: [125,210],info:"map location"}
+};
+
+let eventPin = new CustomEvent("pin", info);
+let callback = function(event){
+  console.log(event);
+}
+
+document.addEventListener("pin", callback);
+
+document.dispatchEvent(eventPin);

@@ -1,18 +1,77 @@
+### 1. What is the scope of ‘this’ inside the Arrow function? Explain with an example? 
+  
+   - The value of this inside a function is usually defined by the function's call. So, this can have different values inside it for each execution of the function.
+
+**Algorithm**
+
+Step 1. Use strict mode as public. Declare a variable with a value.
+Step 2. Declare arrow function and access the variable a by this.name
+Step 3. Create arrow function inside a object and call the variable a by this.name
+Step 4. Create a object and create a property with value and a arrow function.
+Step 5. Access the value from arrow function.
+Step 6. Call the function.
+
+
+**Psuedocode**
+```markdown
+"use strict";
+INIT person ;
+FUNCTION 
+    PRINT result;
+    PRINT result;
+END FUNCTION 
+FUNCTION      
+    PRINT result;    
+    PRINT result;
+END FUNCTION
+person.thisInArrow(); 
+person.thisInRegular();
+```
+
+**Code**
+```javascript
+"strict mode";
+let person = { 
+    name: "karthik", 
+    fun1:function (){
+    console.log(this.name);
+    }
+    thisInArrow:() => { 
+    console.log(this);
+    console.log(func1());; // no 'this' binding here 
+    }, 
+    thisInRegular(){ 
+    console.log(this);    
+    console.log(this.name); // 'this' binding works here 
+    } 
+   };
+   person.thisInArrow(); 
+   person.thisInRegular();
+```
+
+**Output**
+```console
+Window {0: Window, window: Window, self: Window, document: document, name: '', location: Location, …} 
+{name: 'karthik', thisInArrow: ƒ, thisInRegular: ƒ}
+ karthik
+```
+
 ### 2. How would you create all permutations of a string?
  - A Permutation of a string is another string that contains same characters, only the order of characters can be different. 
 
 **Algorithm**
 
-Step 1. Use strict mode as public. Declare a variable.
-Step 2. Create a function with parameters.
-Step 3. Check the length of the string and increase the count at every time.
-Step 4. Declare a for loop and run till the length of the string.
-Step 5. Use recursion method to call the function again and again.
-Step 6. Outside the function check length and type of string then call the function.
+- Step 1. Use strict mode as public. Declare a variable.
+- Step 2. Create a function with parameters.
+- Step 3. Check the length of the string and increase the count at every time.
+- Step 4. Declare a for loop and run till the length of the string.
+- Step 5. Use recursion method to call the function again and again.
+- Step 6. Outside the function check length and type of string then call the function.
 
 
 **Psuedocode**
 ```
+BEGIN
 "use strict"
 INIT string="ABC";
 FUNCTION permutation( string, result)
@@ -38,6 +97,7 @@ IF(typeof string === "string")THEN
 ELSE
         PRINT("This is not string")
 ENDIF
+END
 ```
 **Code**
 ```javascript
@@ -86,13 +146,13 @@ Total number of permutation are : 6
 
 **Algorithm**
 
-Step 1. Create a html file.
-Step 2. Inside the script tag write a function with name of clicked.
-Step 3. Print something inside the function.
-Step 4. Add event of click then function is executed.
+- Step 1. Create a html file.
+- Step 2. Inside the script tag write a function with name of clicked.
+- Step 3. Print something inside the function.
+- Step 4. Add event of click then function is executed.
 
 **Psuedocode**
-```htm
+```html
 <html>
     <head>
         <title>Classic event call back</title>
@@ -113,7 +173,7 @@ Step 4. Add event of click then function is executed.
 
 **Code**
 
-```htm
+```html
 <html>
     <head>
         <title>Arrow event call back</title>
@@ -140,13 +200,13 @@ You Clicked!!!
 
 **Algorithm**
 
-Step 1. Create a html file.
-Step 2. Inside the script tag write arrow function clicked.
-Step 3. Print something inside the function.
-Step 4. Add event of click then function is executed.
+- Step 1. Create a html file.
+- Step 2. Inside the script tag write arrow function clicked.
+- Step 3. Print something inside the function.
+- Step 4. Add event of click then function is executed.
 
 **Psuedocode**
-```htm
+```html
 <html>
     <head>
         <title>Arrow event call back</title>
@@ -217,18 +277,20 @@ console.log(k);
 ## 5. Explain the Class instance method and static method with an example?
 
 **Static Method**
- - If it's a static method (doesn't use any instance data), then declare it as a static method and you can directly call it.
-
+- The following example demonstrates to invoke static method within the non static method.
 **Algorithm**
 
-Step 1. Use strict mode as public.
-Step 2. Declare a class inside the class create a method.
-Step 3. Then return the value.
-Step 4. Outside the class call the method of class directly.
+- Step 1. Use strict mode as public.
+- Step 2. Declare a class inside the static method.
+- Step 3. Then return the value.
+- Step 4. Create new constructor object for the class.
+- Step 5.  Use the constructor call the method of class.
+ 
 
 **Psuedocode**
 
 ```
+BEGIN
 "use strict"
 CLASS Static1 
     static example1() 
@@ -237,6 +299,7 @@ CLASS Static1
     PRINT (static1.example1());
     stc=new Static1()
 Stc.example2())
+END
 ```
 **Code**
 
@@ -265,10 +328,10 @@ static method 1
  
 **Algorithm**
 
-Step 1. Use strict mode as public.
-Step 2. Create a class inside the class create a method and return something.
-Step 3. Create new constructor object for the class.
-Step 4. Use the constructor call the method of class.
+- Step 1. Use strict mode as public.
+- Step 2. Create a class inside the class create a method and return something.
+- Step 3. Create new constructor object for the class.
+- Step 4. Use the constructor call the method of class.
 
 **Psuedocode**
 ```
@@ -302,6 +365,51 @@ console.log(rectangle2.rec());
 instance method has been called.
 ```
 
+## 6. How does “this” works inside the Class method with an example?
+
+**Algorithm**
+
+- Step 1. Use strict mode as public.
+- Step 2. Create a class with parameters and create a method.
+- Step 3. Use this keyword to access constructor value inside the method.
+- Step 4. Create constructor object and pass the value.
+- Step 5. Call the method.
+
+**Psuedocode**
+```markdown
+CLASS thisClass{
+    constructor(name)
+        this.name = name;
+    hello(){
+        PRINT(this.name);
+ENDCLASS
+INIT obj = new thisClass("karthi");
+obj.hello();
+```
+
+**Code**
+```javascript
+"use strict";
+//'this' inside class
+class thisClass{
+    constructor(name) { 
+      this.name=name;
+    }
+    hello(){
+      console.log(this.name);
+    }
+}
+const obj = new thisClass("karthi");
+obj.hello();
+
+```
+
+*Output*
+
+```console
+karthi
+```
+
 ### 7. What is the execution order of the following block of code?
 ```javascript
 const ex1 = () => console.log(ex1)
@@ -327,34 +435,30 @@ ex()
 
 **Algorithm**
 
-Step 1. Use strict mode as public.
-Step 2. Declare the annonymous function.
-Step 3. Create two set timeout function and print something.
-Step 4. Then call the fucntion.
+- Step 1. Use strict mode as public.
+- Step 2. Declare the function with name and print the statement.
+- Step 3. Again create the function and call the method.
+- Step 4. Then call the function.
 
 
 **Psuedocode**
 ```
-FUNCTION stageTwo() () {
-PRINT('this is just a message');
+BEGIN
+FUNCTION stageTwo() () 
     PRINT(("Inside Level Two!")
-  
-    setTimeout(FUCNTION cb() {
-      PRINT('Callback 1: this is a msg from call back');
-    },0); 
-  
-    
-  
-    setTimeout(FUNCTION cb1() {
-      PRINT('Callback 2: this is a msg from call back');
-    }, 500);
-  
-    PRINT('this is the end');
-  
-  })();
+    FUNCTION END
+FUCNTION stageOne() 
+    stageTwo()
+    FUNCTION END
+FUNCTION main()
+    stageOne()
+    main()
+FUNCTION END
+END
 ```
 **Code**
 ```javascript
+"use strict";
 function stageTwo() {
     console.log("Inside Level Two!")
     }
@@ -368,7 +472,7 @@ function stageTwo() {
     }
     main()
 
-(function() {
+/*(function() {
 
     console.log('this is the start');
   
@@ -384,7 +488,7 @@ function stageTwo() {
   
     console.log('this is the end');
   
-  })();
+  })();*/
 ```
 
 *Output*
@@ -398,10 +502,10 @@ Inside Level Two!
 
 **Algorithm**
 
-Step 1. Use strict mode as public.
-Step 2. Create a new event as start.
-Step 3. Add the event listener.
-Step 4. Dispatch the event. 
+- Step 1. Use strict mode as public.
+- Step 2. Create a new event as start.
+- Step 3. Add the event listener.
+- Step 4. Dispatch the event. 
 
 **Psuedocode**
 ```
@@ -426,6 +530,112 @@ document.dispatchEvent(startEvent);
 hello world
 Event {isTrusted: false, type: 'start', target: document, currentTarget: document, eventPhase: 2, …}
 true
-
 ```
+
+## 10. Explain the ‘super’ and ‘constructor’ keywords inside the Class with an example?
+
+**Constructor**
+
+**Algorithm**
+
+- Step 1. Use strict mode as public.
+- Step 2. Create a class with parameters and create a method.
+- Step 3. Use this keyword to access constructor value inside the method.
+- Step 4. Create constructor object and pass the value.
+- Step 5. Call the method.
+
+**Psuedocode**
+```markdown
+CLASS thisClass{
+    constructor(name)
+        this.name = name;
+    hello(){
+        PRINT(this.name);
+ENDCLASS
+INIT obj = new thisClass("karthi");
+obj.hello();
+```
+
+**Code**
+```javascript
+"use strict";
+//'this' inside class
+class thisClass{
+    constructor(name) { 
+      this.name=name;
+    }
+    hello(){
+      console.log(this.name);
+    }
+}
+const obj = new thisClass("karthi");
+obj.hello();
+```
+
+*Output*
+
+```console
+karthi
+```
+
+**Algorithm**
+
+- Step 1. Use strict mode as public.
+- Step 2. Create a class with parameters and create a method.
+- Step 3. Use this keyword to access constructor value inside the method.
+- Step 4. Create a child class for person use super keyword to access the properties of parent class.
+- Step 5. Call the parent method in child method.
+- Step 6. Create constructor object for child class and call the method.
+
+**Psuedocode**
+```
+"use strict";
+CLASS Person
+    constructor(name) 
+      this.personName = name;
+    person1() 
+      RETURN " my name is "+ this.personName;
+CLASSEND
+CLASS Student extends Person 
+    constructor(name,age) 
+      super(name);
+      this.age = age;
+    person2() 
+      RETURN super.person1() + ', iam ' +this.age;
+INIT person3=new Student("karthi","22");
+PRINT(person3.person2());
+```
+
+**Code**
+```javascript
+//super
+"use strict";
+class Person {
+    constructor(name) {
+       this.personName = name;
+    }
+    person1() {
+       return " my name is "+ this.personName;
+    }
+ }
+ class Student extends Person {
+    constructor(name,age) {
+        super(name);
+       this.age=age;
+    }
+    person2() {
+       return super.person1()+', iam ' +this.age;
+    }
+ }
+
+ const person3=new Student("karthi",22);
+ console.log(person3.person2());
+```
+
+*Output*
+
+```console
+my name is karthi, iam 22
+```
+
 

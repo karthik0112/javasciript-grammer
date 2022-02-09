@@ -10,3 +10,5 @@ class thisClass{
 }
 const obj = new thisClass("karthi");
 obj.hello();
+
+//console.log(obj.name);
