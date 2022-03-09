@@ -13,11 +13,13 @@
     
         class static1 { 
             static example1() {
-                return "static method 1"
+                console.log("static method 1");
             }
-            example2() { 
+            static example2() { 
                 console.log(static1.example1());
             }
         }
-        let stc  = new static1();
-        stc.example2(); 
+        //let stc  = new static1();
+       // stc.example1();
+       // static1.example1();
+       static1.example1();
